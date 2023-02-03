@@ -41,7 +41,7 @@ Comentários:
 
 - O site está 100% resposivo.
 
-Acesse o projeto: [Money Page](https://heldernf.github.io/my-projects/money-page)
+Acesse o projeto: <a href="https://heldernf.github.io/my-projects/money-page" target="_blank">Money Page</a>
 
 <br>
 
