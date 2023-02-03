@@ -39,7 +39,7 @@ Pendências:
 
 Comentários:
 
-- O site está 100% resposivo.
+- O site está 100% responsivo.
 
 Acesse o projeto: [Money Page](https://heldernf.github.io/my-projects/money-page)
 
