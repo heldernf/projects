@@ -1,0 +1,73 @@
+@media (max-width: 374px) {
+    nav ul li a {
+        font-size: 0.6em;
+    }
+
+    main {
+        width: 80vw;
+    }
+
+    #div-p p {
+        font-size: 0.85em;
+    }
+}
+
+/* Tablet */
+@media (min-width: 481px) {
+    nav ul li a {
+        font-size: 0.8em;
+    }
+
+    main {
+        width: 80vw;
+    }
+
+    #div-p p {
+        font-size: 1.35em;
+    }
+}
+
+/* Laptop */
+@media (min-width: 769px) {
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    main {
+        width: 75vw;
+    }
+
+    #div-p p {
+        font-size: 1.55em;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    main {
+        width: 70vw;
+    }
+
+    #div-p p {
+        font-size: 1.75em;
+    }
+}
+
+/* Tv */
+@media (min-width: 1201px) {
+    nav ul li a {
+        font-size: 1.4em;
+    }
+
+    main {
+        width: 65vw;
+    }
+
+    #div-p p {
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,67 @@
+/* Tablet */
+@media (min-width: 481px) {
+    nav ul li a {
+        font-size: 0.8em;
+    }
+
+    main {
+        margin: auto;
+        width: 80vw;
+        column-gap: 50px;
+    }
+}
+
+/* Laptop */
+@media (min-width: 769px) {
+    body {
+        background: white url(../img/Wallpaper-esqueleto.jpeg) no-repeat right;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    main {
+        padding-top: 120px;
+        margin: auto;
+        width: 90vw;
+        column-gap: 40px;
+        row-gap: 50px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    body {
+        background: white url(../img/Wallpaper-esqueleto.jpeg) no-repeat top;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    main {
+        padding-top: 120px;
+        margin: auto;
+        width: 70vw;
+        column-gap: 40px;
+        row-gap: 40px;
+    }
+}
+
+/* Tv */
+@media (min-width: 1201px) {
+    body {
+        background: white url(../img/Wallpaper-esqueleto.jpeg) no-repeat top;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    nav ul li a {
+        font-size: 1.4em;
+    }
+}
