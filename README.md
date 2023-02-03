@@ -1,4 +1,4 @@
-# PROJETO 001
+# PROJETO: House City Store
 
 Nome: House City Store
 
@@ -25,7 +25,7 @@ Acesse o projeto: [House City Store](https://heldernf.github.io/my-projects/stor
 
 <br>
 
-# PROJETO 002
+# PROJETO: Money Page
 
 Nome: Money Page
 
