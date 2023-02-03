@@ -1,6 +1,6 @@
-# PROJETO: House City Store
+# PROJETO: Store House City
 
-Nome: House City Store
+Nome: Store House City
 
 Duração: Três dias.
 
