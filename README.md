@@ -21,7 +21,7 @@ Comentários:
 
 - O zoom da página não funciona por conta do uso do "vh", então devo me atentar a fazer o correto uso
 
-Link para o Projeto [House City Store](https://heldernf.github.io/my-projects/store-house-city)
+Acesse o projeto: [House City Store](https://heldernf.github.io/my-projects/store-house-city)
 
 <br>
 
@@ -41,7 +41,7 @@ Comentários:
 
 - O site está 100% resposivo.
 
-Link para o Projeto [Money Page](https://heldernf.github.io/my-projects/money-page)
+Acesse o projeto: [Money Page](https://heldernf.github.io/my-projects/money-page)
 
 <br>
 
