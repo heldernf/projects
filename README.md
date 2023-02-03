@@ -1,10 +1,3 @@
-# don't-click-test
-
-Aqui estão vários projetos que estou fazendo no início da minha carreira de estudante de desenvolvimento web, não espere algo 100% funcional ou perfeito.
-Here are several projects I'm doing at the beginning of my web development student career, don't expect something 100% functional or perfect.
-
-<br>
-
 # PROJETO 001
 
 Nome: House City Store
@@ -28,24 +21,28 @@ Comentários:
 
 - O zoom da página não funciona por conta do uso do "vh", então devo me atentar a fazer o correto uso
 
-Link para o Projeto [House City Store](https://heldernf.github.io/don-t-click-test/store-house-city)
+Link para o Projeto [House City Store](https://heldernf.github.io/my-projects/store-house-city)
 
 <br>
 
 # PROJETO 002
 
-Nome: My Perfil Page
+Nome: Money Page
 
-Duração: Duas horas e Trinta minutos.
+Duração: 3 dias.
 
-Sobre: Esse projeto é bem simples e teve apenas o intúito de compreender melhor a propriedade "background-image".
+Sobre: Sua principal funcionalidade é hospedar QRCodes e chaves Pix Aleatória.
 
 Pendências:
 
-- Responsividade.
+- Nenhuma.
 
 Comentários:
 
-- O zoom da página não funciona por conta do uso do "vh", então devo me atentar a fazer o correto uso
+- O site está 100% resposivo.
 
-Link para o Projeto <a target="_blank" href="https://heldernf.github.io/don-t-click-test/my-perfil-page">My Perfil Page</a>
+Link para o Projeto [Money Page](https://heldernf.github.io/my-projects/money-page)
+
+<br>
+
+# PROJETO 003
