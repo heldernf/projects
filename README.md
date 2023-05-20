@@ -41,7 +41,7 @@ Acesse o projeto: [Money Page](https://heldernf.github.io/my-projects/money-page
 
 <br>
 
-# PROJETO: GO BUY
+# PROJETO: Go Buy
 
 Nome: Go Buy
 
