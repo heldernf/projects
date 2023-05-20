@@ -2,8 +2,6 @@
 
 Nome: Store House City
 
-Duração: Três dias.
-
 Sobre: Esse projeto é uma copia da loja da cidade virtual de Five M, House city. O projeto foi concluido so que com algumas coisas que faltaram resolver, veja as coisas que faltaram resolver em "Pendências"
 
 Pendências:
@@ -29,8 +27,6 @@ Acesse o projeto: [House City Store](https://heldernf.github.io/my-projects/stor
 
 Nome: Money Page
 
-Duração: 3 dias.
-
 Sobre: Sua principal funcionalidade é hospedar QRCodes e chaves Pix Aleatória.
 
 Pendências:
@@ -45,4 +41,20 @@ Acesse o projeto: [Money Page](https://heldernf.github.io/my-projects/money-page
 
 <br>
 
-# PROJETO 003
+# PROJETO GO BUY
+
+Nome: Go Buy
+
+Sobre: Sua principal funcionalidade é hospedar LINK e IMG de produtos de lojas afiliadas (Amazon e Aliexpress).
+
+Pendências:
+
+- Adicionar uma maior precisão a barra de busca (search-bar).
+
+Comentários:
+
+- O site está 100% responsivo.
+
+Acesse o projeto: [Go Buy](https://heldernf.github.io/my-projects/go-buy)
+
+<br>
