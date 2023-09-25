@@ -2,7 +2,10 @@
 
 :root {
     --white: white;
+    --gray: #b5b5b4;
     --black: black;
+    --logo-color-1: #e4ad0e;
+    --logo-color-2: #0f1016;
 }
 
 * {
@@ -16,12 +19,17 @@ html {
     scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body {
-    background-color: blue;
+    background-color: var(--logo-color-2);
 }
 
 header {
-    background-color: #0f1016;
+    background-color: rgba(13, 14, 20, 0.7);
+    backdrop-filter: blur(.1rem);
     width: 100%;
     height: 3.5rem;
     display: flex;
@@ -29,12 +37,13 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
-    padding: 0px 10px;
+    padding: 0 1rem;
+    z-index: 1;
 }
 
 header a#logo {
     display: block;
-    width: 45px;
+    width: 2.5rem;
     min-height: 0;
     display: flex;
     justify-content: center;
@@ -49,72 +58,119 @@ header div#menuDrop button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: 37px;
-    padding: 0 6px;
+    width: 1.4rem;
     display: block;
+
 }
 
-header div#menuDrop button img {
+header div#menuDrop button svg {
     display: block;
     width: 100%;
     height: 100%;
+    fill: var(--white);
 }
 
-header div#menuDrop ul {
+header div#menuDrop ul#ulMenu {
+    transform: scale(0);
     position: absolute;
     list-style: none;
     top: 100%;
-    right: 5%;
+    right: 1rem;
+    transition: .3s;
 }
 
-header div#menuDrop ul li {
-    background-color: #0f1016;
+header div#menuDrop ul#ulMenu li {
+    background-color: rgba(13, 14, 20, 0.7);
+    backdrop-filter: blur(.1rem);
     margin-top: 1px;
-    position: relative;
 }
 
-header div#menuDrop ul li a {
+header div#menuDrop ul#ulMenu li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10rem;
+    column-gap: .3rem;
+    width: 9rem;
     height: 2.5rem;
-    padding-left: 1rem;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    letter-spacing: -.065rem;
     text-decoration: none;
+    color: var(--gray);
+    fill: var(--logo-color-1);
+    transition: .3s;
+}
+
+header div#menuDrop ul#ulMenu li a:hover {
+    background-color: var(--logo-color-1);
     color: var(--white);
+    fill: var(--white);
 }
 
-header div#menuDrop ul li:nth-child(1) a::before {
-    content: url(svg/question-icon-002.svg);
-    position: absolute;
-    left: 12%;
-    top: 55%;
-    transform: translateY(-50%);
-}
-
-header div#menuDrop ul li:nth-child(2) a::before {
-    content: url(svg/bar-chart-icon-001.svg);
-    position: absolute;
-    left: 27%;
-    top: 55%;
-    transform: translateY(-50%);
-}
-
-header div#menuDrop ul li:nth-child(3) a::before {
-    content: url(svg/email-icon-001.svg);
-    position: absolute;
-    left: 22%;
-    top: 55%;
-    transform: translateY(-50%);
-}
-
-header div#menuDrop ul li:nth-child(3) a:hover::before {
-    color: white;
-    fill: white;
+header div#menuDrop ul#ulMenu li a svg {
+    height: .95rem;
 }
 
 main {
     margin-top: 3.5rem;
-    padding: 10px 11px;
+    position: relative;
+    min-height: 100%;
+}
+
+main section#home {
+    height: 32rem;
+    background-color: var(--logo-color-2);
+    position: relative;
+}
+
+main section#home::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 14.5rem;
+    right: 1.2rem;
+    filter: blur(5rem);
+    transform: translateX(-50%);
+    background-color: var(--logo-color-1);
+}
+
+main section#home::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    left: -5.4rem;
+    top: -5.4rem;
+    filter: blur(5rem);
+    background-color: var(--logo-color-1);
+}
+
+main section#home img {
+    width: 17rem;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transform: translateY(-99.96%);
+}
+
+main section#home h1 {
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+    font-weight: 900;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 54%;
+}
+
+main section#home h1 span {
+    text-decoration: underline;
+    text-decoration-color: var(--logo-color-1);
+}
+
+main section#comoJogar {
+    height: 37rem;
+    background-color: purple;
 }
