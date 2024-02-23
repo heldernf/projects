@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --white: white;
+    --black: black;
+    --p1: #6A3ED4;
+    --p2: #01040C;
+    --p3: #030611;
+    --borda: #070A1A;
+    --texto1: #B9B9B9;
+    --texto2: #DBE2FF;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Archivo", sans-serif;    
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header {
+    background-color: #040715;
+    height: 6.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+header div#container-header {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.6rem;
+}
+
+header div#container-header img {
+    width: 5rem;
+}
+
+header div#container-header nav#menu {
+    position: relative;
+}
+
+header div#container-header nav#menu div#menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: .8rem;
+}
+
+header div#container-header nav#menu div#menu-icon span {
+    display: block;
+    width: 3.2rem;
+    height: .3rem;
+    background-color: var(--texto2);
+    border-radius: 3.2rem;
+}
+
+header div#container-header nav#menu ul {
+    position: absolute;
+    display: none;
+}
+
+main {
+    margin-top: 6.5rem;
+}
+
+/* ----- SECTION INÍCIO -- SECTION INÍCIO -- SECTION INÍCIO ----- */
+
+main section#inicio {
+    background-color: #01040C;
+}
+
+main section > div {
+    max-width: 128rem;
+    margin: 0 auto;
+}
+
+main section#inicio div#container-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section#inicio div#container-inicio img {
+    width: 25rem;
+    margin-top: 1.4rem;
+}
+
+main section#inicio div#container-inicio div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+}
+
+main section#inicio div#container-inicio div p {
+    color: var(--texto1);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: -.01rem;
+    line-height: 140%;
+    margin-top: 2.2rem;
+    width: 26rem;
+    text-align: center;
+}
+
+main section#inicio div#container-inicio div ul {
+    display: flex;
+    column-gap: 4.8rem;
+    margin-top: 2.4rem;
+}
+
+main section#inicio div#container-inicio div ul li {
+    
+    list-style: none;
+}
+
+main section#inicio div#container-inicio div ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--p3);
+    border: .2rem solid var(--borda);
+    border-radius: .5rem;
+}
+
+main section#inicio div#container-inicio div ul li a svg {
+    width: 2em;
+    height: 2em;
+    fill: var(--p1);
+}
+
+main section#inicio div#container-inicio div a#a-contatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23.4rem;
+    height: 3.8rem;
+    margin: 1.7rem 0 1.6rem 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--p2);
+    border: .2rem solid var(--borda);
+    border-radius: .5rem;
+}
+
+/* ----- SECTION QUALIDADES -- SECTION QUALIDADES -- SECTION QUALIDADES ----- */
+
+main section#qualidades {
+    background-color: var(--p3);
+}
+
+main section#qualidades div#container-qualidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section#qualidades div#container-qualidades h1 {
+    color: var(--white);
+    font-size: 3.3rem;
+    align-self: flex-start;
+    width: 28rem;
+    margin: 2.2rem auto 3.6rem auto;
+
+    position: relative;
+}
+
+main section#qualidades div#container-qualidades h1::before {
+    content: '';
+    display: block;
+    width: 3.9rem;
+    height: .2rem;
+    background-color: var(--p1);
+
+    position: absolute;
+    left: .2rem;
+    bottom: -.3rem;
+}
+
+main section#qualidades div#container-qualidades h1::after {
+    content: '';
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: var(--p1);
+
+    position: absolute;
+    left: 4.3rem;
+    bottom: -.4rem;
+}
+
+main section#qualidades div#container-qualidades div#container-box-qualidades div.box-qualidade {
+    width: 28rem;
+    height: 20.8rem;
+    background-color: var(--p2);
+    border-radius: .5rem;
+    border: .2rem solid var(--borda);
+    padding: 2.3rem;
+    margin-bottom: 4.2rem;
+}
+
+main section#qualidades div#container-qualidades div#container-box-qualidades div.box-qualidade div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section#qualidades div#container-qualidades div#container-box-qualidades div.box-qualidade div h2 {
+    color: var(--white);
+    font-size: 2.1rem;
+}
+
+main section#qualidades div#container-qualidades div#container-box-qualidades div.box-qualidade div svg {
+    width: 4.1rem;
+}
+
+main section#qualidades div#container-qualidades div#container-box-qualidades div.box-qualidade h3 {
+    color: var(--texto1);
+    margin-top: 3rem;
+    font-weight: 500;
+    line-height: 140%;  
+    font-size: 1.25rem;
+}
+
+/* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
+
+main section#projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--p2);
+}
+
+main section#projetos div#container-projetos h1 {
+    width: 28rem;
+    margin: 2.2rem auto 3.6rem auto;
+    font-size: 3.3rem;
+    align-self: flex-start;
+    color: var(--white);
+
+    position: relative;
+}
+
+main section#projetos div#container-projetos h1::before {
+    content: '';
+    display: block;
+    width: 3.9rem;
+    height: .2rem;
+    background-color: var(--p1);
+
+    position: absolute;
+    left: .2rem;
+    bottom: -.3rem;
+}
+
+div#container-projetos h1::after {
+    content: '';
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: var(--p1);
+
+    position: absolute;
+    left: 4.3rem;
+    bottom: -.4rem;
+}
+
+div.box-projeto {
+    width: 28rem;
+    background-color: var(--p3);
+    border: .2rem solid var(--borda);
+    border-radius: .5rem;
+    padding: 1.9rem;
+}
+
+div.box-projeto h2 {
+    color: var(--white);
+    font-size: 2.9rem;
+}
+
+div.box-projeto div img {
+    width: 23.7rem;
+    height: 17.2rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-top: 1.4rem;
+}
+
+div.box-projeto div div#content-projeto h3 {
+    color: var(--texto1);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: 1.4rem;
+}
+
+div.box-projeto div div#content-projeto p {
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2.6rem;
+}
+
+div.box-projeto div div#content-projeto div {
+    display: flex;
+    flex-wrap: wrap;
+    border: .2rem solid var(--borda);
+}
+
+div.box-projeto div div#content-projeto div img {
+    width: 3rem;
+    height: auto;
+}
