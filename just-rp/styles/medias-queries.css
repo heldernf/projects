@@ -1,0 +1,1138 @@
+@media (min-width: 600px) {
+    /* <--- HEADER --- HEADER --- HEADER --- HEADER --- HEADER --- HEADER ---> */
+
+    header div#containerHeader {
+        height: 4.2rem;
+    }
+
+    /* |--- LOGO ---| */
+
+    header div#containerHeader a#logo {
+        width: 3rem;
+    }
+
+    /* |--- MENU TRÊS TRACINHO ---| */
+
+    header div#containerHeader div#menuDrop button {
+        width: 1.5rem;
+    }
+
+    /* <--- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN ---> */
+
+    main {
+        margin-top: 4.2rem;
+        /* DEVE TER O MESMO TAMANHO QUE O header */
+    }
+
+    /* |--- SEÇÃO INICIO (APRESENTA O SERVIDOR) ---| */
+
+    main section#inicio {
+        height: 45rem;
+        background-size: 28.5rem;
+    }
+
+    main section#inicio h1 {
+        width: 27rem;
+        font-size: 2.5rem;
+        line-height: 3rem;
+
+        animation: none;
+        transform: translateX(-50%);
+    }
+
+    main section#inicio div#containerSocial {
+        column-gap: 1.7rem;
+    }
+
+    main section#inicio div#containerSocial p {
+        font-weight: 400;
+        font-size: .7875rem;
+        padding-left: .6rem;
+        letter-spacing: .6rem;
+    }
+
+    main section#inicio div#containerSocial div {
+        width: 3.1rem;
+        height: 3.1rem;
+    }
+
+    /* |--- SEÇÃO DADOS (ESTATÍSTICAS DO SERVIDOR) ---| */
+
+    main section#dados h2 {
+        font-size: 2rem;
+    }
+
+    main section#dados>p {
+        width: 34rem;
+    }
+
+    main section#dados div#containerDadosMedia {
+        width: max-content;
+        margin: 2.5rem auto 0 auto;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 4rem 6rem;
+    }
+
+    main section#dados div#containerDadosMedia div.divDadosMedia {
+        margin-top: 0;
+    }
+
+    main section#dados div#containerDadosMedia div.divDadosMedia h3 {
+        font-size: 3rem;
+        font-weight: 900;
+    }
+
+    main section#dados div#containerDadosMedia div.divDadosMedia p {
+        font-size: 1rem;
+        line-height: 1.3rem;
+        width: max-content;
+    }
+
+    main section#dados div#promover h3 {
+        font-size: 1.9rem;
+        margin-top: 4rem;
+    }
+
+    main section#dados div#promover p {
+        width: 34rem;
+        margin-top: 1rem;
+        font-size: .85rem;
+        line-height: 1.05rem;
+    }
+
+    /* |--- SEÇÃO VIP (MOSTRA OS VIPS DA CIDADE) ---| */
+
+    main section#vip {
+        padding-bottom: 7rem;
+    }
+
+    main section#vip div#vip-container h2 {
+        font-size: 2rem;
+    }
+
+    main section#vip div#vip-container>p {
+        width: 35rem;
+    }
+
+    /* |--- CONTAINER DE TODOS OS SLIDES (CARROS - MOTOS - ETC) ---| */
+
+    main section#vip div#vip-container div#containerSlides {
+        width: 35rem;
+        margin-top: 2rem;
+
+        display: grid;
+        grid-template-areas:
+            "child1 child2"
+            "child3 child4";
+        gap: .8rem;
+
+        position: relative;
+    }
+
+    main section#vip div#vip-container div#containerSlides div.slide {
+        height: 13rem;
+    }
+
+    main section#vip div#vip-container div#containerSlides div.slide:nth-child(1) {
+        grid-area: child1;
+    }
+
+    main section#vip div#vip-container div#containerSlides div.slide:nth-child(2) {
+        grid-area: child2;
+    }
+
+    main section#vip div#vip-container div#containerSlides div.slide:nth-child(3) {
+        grid-area: child3;
+    }
+
+    main section#vip div#vip-container div#containerSlides div.slide:nth-child(4) {
+        grid-area: child4;
+    }
+
+    main section#vip div#vip-container div#containerSlides div.slide:not(:nth-child(4)) {
+        margin: 0;
+    }
+
+    /* |--- BOTÃO CONFIRA MAIS ---| */
+
+    main section#vip div#vip-container div#containerSlides a {
+        margin: 0;
+        width: 15rem;
+        box-shadow: .3rem .3rem .3rem #0000005b;
+
+        position: absolute;
+        bottom: -4rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* |--- SEÇÃO COMO JOGAR (ENSINA COMO JOGAR NO SERVIDOR) ---| */
+
+    main section#comoJogar h2 {
+        font-size: 2rem;
+    }
+
+    main section#comoJogar div#containerPassos div.passos {
+        width: 35rem;
+    }
+
+    /* |--- VÍDEO TUTORIAL ---| */
+
+    main section#comoJogar div#containerPassos div.passos:nth-child(4) {
+        height: 19rem;
+    }
+
+    /* |--- SEÇÃO CONTATO (FORMULÁRIO) ---| */
+
+    main section#contato form {
+        width: 35rem;
+        padding: 5rem 1.8rem 2.5rem 1.8rem;
+
+        display: grid;
+        grid-template-areas:
+            "nome email"
+            "mensagem mensagem"
+        ;
+        gap: .9rem;
+        align-items: start;
+    }
+
+    main section#contato form h2 {
+        font-size: 1.5rem;
+    }
+
+    main section#contato form button {
+        font-size: 1.05rem;
+        width: 8rem;
+        height: 2.5rem;
+
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, calc(-50% + .35rem));
+    }
+
+    main section#contato form div#divNome,
+    div#divEmail,
+    div#divMensagem {
+        margin: 0;
+    }
+
+    main section#contato form div#divNome {
+        grid-area: nome;
+    }
+
+    main section#contato form div#divEmail {
+        grid-area: email;
+    }
+
+    main section#contato form div#divMensagem {
+        grid-area: mensagem;
+    }
+
+    /* <--- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER ---> */
+
+    /* |--- LINKS MEDIAS SOCIAIS ---| */
+
+    footer div#footer-container div#footerSocial a {
+        width: 1.5rem;
+    }
+
+    /* |--- DIREITOS RESERVADOS ---| */
+
+    footer div#footer-container div#footerAutoral img {
+        width: 3rem;
+    }
+
+    footer div#footer-container div#footerAutoral p#copyright {
+        font-size: .9rem;
+    }
+}
+
+@media (min-width: 768px) {
+    /* <--- HEADER --- HEADER --- HEADER --- HEADER --- HEADER --- HEADER ---> */
+
+    header div#containerHeader {
+        height: 4.5rem;
+        padding: 0 1.5rem;
+    }
+
+    /* |--- LOGO ---| */
+
+    header div#containerHeader a#logo {
+        width: 3.4rem;
+    }
+
+    /* |--- MENU TRÊS TRACINHO ---| */
+
+    header div#containerHeader div#menuDrop button {
+        width: 1.6rem;
+    }
+
+    /* <--- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN ---> */
+
+    main {
+        margin-top: 4.5rem;
+        /* DEVE TER O MESMO TAMANHO QUE O header */
+    }
+
+    /* |--- SEÇÃO INICIO (APRESENTA O SERVIDOR) ---| */
+
+    main section#inicio {
+        height: 50rem;
+        background-size: 32.5rem;
+    }
+
+    main section#inicio h1 {
+        width: 33rem;
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    main section#inicio div#containerSocial {
+        column-gap: 1.9rem;
+    }
+
+    main section#inicio div#containerSocial p {
+        font-weight: 400;
+        font-size: .8875rem;
+        padding-left: .7rem;
+        letter-spacing: .7rem;
+    }
+
+    main section#inicio div#containerSocial div {
+        width: 3.15rem;
+        height: 3.15rem;
+    }
+
+    /* |--- SEÇÃO DADOS (ESTATÍSTICAS DO SERVIDOR) ---| */
+
+    main section#dados h2 {
+        font-size: 2.5rem;
+    }
+
+    main section#dados>p {
+        width: 41rem;
+    }
+
+    main section#dados div#containerDadosMedia div.divDadosMedia h3 {
+        font-size: 3.3rem;
+    }
+
+    main section#dados div#containerDadosMedia div.divDadosMedia p {
+        font-size: 1.1rem;
+    }
+
+    main section#dados div#promover h3 {
+        font-size: 2rem;
+    }
+
+    main section#dados div#promover p {
+        width: 44rem;
+        font-size: .88rem;
+    }
+
+    /* |--- SEÇÃO VIP (MOSTRA OS VIPS DA CIDADE) ---| */
+
+    main section#vip div#vip-container h2 {
+        font-size: 2.5rem;
+    }
+
+    main section#vip div#vip-container>p {
+        width: 43rem;
+    }
+
+    /* |--- CONTAINER DE TODOS OS SLIDES (CARROS - MOTOS - ETC) ---| */
+
+    main section#vip div#vip-container div#containerSlides {
+        width: 43rem;
+    }
+
+    /* |--- BOTÃO CONFIRA MAIS ---| */
+
+    main section#vip div#vip-container div#containerSlides a {
+        width: 20rem;
+    }
+
+    /* |--- SEÇÃO COMO JOGAR (ENSINA COMO JOGAR NO SERVIDOR) ---| */
+
+    main section#comoJogar h2 {
+        font-size: 2.5rem;
+    }
+
+    main section#comoJogar div#containerPassos div.passos {
+        width: 43rem;
+    }
+
+    /* |--- VÍDEO TUTORIAL ---| */
+
+    main section#comoJogar div#containerPassos div.passos:nth-child(4) {
+        height: 24rem;
+    }
+
+    /* |--- SEÇÃO CONTATO (FORMULÁRIO) ---| */
+
+    main section#contato form {
+        width: 43rem;
+    }
+
+    main section#contato form h2 {
+        font-size: 2rem;
+    }
+
+    main section#contato form div#divMensagem textarea {
+        height: 11rem;
+    }
+
+    /* <--- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER ---> */
+
+    /* |--- DIREITOS RESERVADOS ---| */
+
+    footer div#footer-container div#footerAutoral {
+        gap: 0 0.4rem;
+    }
+
+    footer div#footer-container div#footerAutoral img {
+        width: 3.3rem;
+    }
+
+    footer div#footer-container div#footerAutoral p#copyright {
+        font-size: .93rem;
+    }
+}
+
+@media (min-width: 992px) {
+    /* <--- HEADER --- HEADER --- HEADER --- HEADER --- HEADER --- HEADER ---> */
+
+    /* |--- MENU TRÊS TRACINHO ---| */
+
+    header div#containerHeader div#menuDrop button {
+        display: none;
+    }
+
+    /* |--- OPÇÕES DO MENU ---| */
+
+    header div#containerHeader div#menuDrop ul#ulMenu {
+        transform: scale(1);
+
+        position: relative;
+        display: flex;
+    }
+
+    header div#containerHeader div#menuDrop ul#ulMenu li {
+        background-color: transparent;
+        margin-top: 0;
+    }
+
+    header div#containerHeader div#menuDrop ul#ulMenu li a {
+        width: 8.5rem;
+        font-size: .85rem;
+        text-transform: uppercase;
+        letter-spacing: -.04rem;
+
+        position: relative;
+    }
+
+    header div#containerHeader div#menuDrop ul#ulMenu li:not(:last-child) a::after {
+        content: '';
+        width: .0625rem;
+        height: 40%;
+        background-color: var(--gray);
+
+        position: absolute;
+        right: calc(-.0625rem / 2);
+    }
+
+    header div#containerHeader div#menuDrop ul#ulMenu li a:hover {
+        background-color: transparent;
+    }
+
+    header div#containerHeader div#menuDrop ul#ulMenu li a svg {
+        display: none;
+    }
+
+    /* <--- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN ---> */
+
+    /* |--- SEÇÃO INICIO (APRESENTA O SERVIDOR) ---| */
+
+    main section#inicio h1 {
+        width: 39rem;
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+
+    main section#inicio div#containerSocial {
+        column-gap: 2.3rem;
+    }
+
+    main section#inicio div#containerSocial p {
+        font-size: .9rem;
+        padding-left: .8rem;
+        letter-spacing: .8rem;
+    }
+
+    main section#inicio div#containerSocial div {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    /* |--- SEÇÃO DADOS (ESTATÍSTICAS DO SERVIDOR) ---| */
+
+    main section#dados {
+        padding-bottom: 3.5rem;
+    }
+
+    main section#dados h2 {
+        font-size: 3rem;
+    }
+
+    main section#dados div#containerDadosMedia div.divDadosMedia h3 {
+        font-size: 3.5rem;
+    }
+
+    main section#dados div#containerDadosMedia div.divDadosMedia p {
+        font-size: 1.15rem;
+    }
+
+    main section#dados div#promover h3 {
+        font-size: 2.1rem;
+    }
+
+    main section#dados div#promover p {
+        width: 46rem;
+        font-size: .90rem;
+    }
+
+    /* |--- SEÇÃO VIP (MOSTRA OS VIPS DA CIDADE) ---| */
+
+    main section#vip {
+        padding: 0;
+    }
+
+    main section#vip div#vip-container {
+        width: max-content;
+        margin: 0 auto;
+        padding: 9rem 0 5rem 0;
+
+        display: flex;
+        gap: 0 1rem;
+    }
+
+    main section#vip div#vip-container h2 {
+        font-size: 3rem;
+        margin: 0;
+
+        position: absolute;
+        top: 5.5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    main section#vip div#vip-container>p {
+        width: 18rem;
+        height: 26.8rem;
+        padding-top: 2.5rem;
+        text-align: left;
+        font-size: .9rem;
+
+        background: var(--color-3) url(..//img/hashtag.svg) no-repeat;
+        background-size: 3rem;
+        background-position: left 9% bottom 32%;
+
+        position: relative;
+    }
+
+    main section#vip div#vip-container>p::before {
+        content: 'Sobre o VIP';
+        color: var(--color-1);
+        font-weight: 800;
+        font-size: 1.3rem;
+
+        position: absolute;
+        top: 2.5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    main section#vip div#vip-container>p::after {
+        content: 'Cidade Just';
+        width: max-content;
+        color: var(--color-4);
+        font-weight: 800;
+        font-size: 2.5rem;
+        font-family: Skylight-Graffiti, sans-serif;
+
+        position: absolute;
+        left: 27%;
+        bottom: 32%;
+    }
+
+    /* |--- CONTAINER DE TODOS OS SLIDES (CARROS - MOTOS - ETC) ---| */
+
+    main section#vip div#vip-container div#containerSlides {
+        width: 40rem;
+        margin-top: 0;
+    }
+
+    /* |--- BOTÃO CONFIRA MAIS ---| */
+
+    main section#vip div#vip-container div#containerSlides a {
+        width: 18rem;
+        box-shadow: none;
+        border: .2rem solid var(--color-4);
+
+        position: absolute;
+        bottom: 0%;
+        left: -19rem;
+        transform: translateX(0);
+    }
+
+    /* |--- SEÇÃO COMO JOGAR (ENSINA COMO JOGAR NO SERVIDOR) ---| */
+
+    main section#comoJogar {
+        padding-bottom: 5.5rem;
+    }
+
+    main section#comoJogar h2 {
+        font-size: 3rem;
+        margin: 3.3rem auto;
+    }
+
+    main section#comoJogar div#containerPassos {
+        width: max-content;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-areas:
+            "passo1 tutorial"
+            "passo2 tutorial"
+            "passo3 tutorial"
+        ;
+        gap: 0 1.5rem;
+    }
+
+    main section#comoJogar div#containerPassos div.passos {
+        width: 29rem;
+        margin: 0 auto 1rem auto;
+    }
+
+    main section#comoJogar div#containerPassos div.passos:nth-child(1) {
+        grid-area: passo1;
+    }
+
+    main section#comoJogar div#containerPassos div.passos:nth-child(2) {
+        grid-area: passo2;
+    }
+
+    main section#comoJogar div#containerPassos div.passos:nth-child(3) {
+        margin-bottom: 0;
+
+        grid-area: passo3;
+    }
+
+    /* |--- VÍDEO TUTORIAL ---| */
+
+    main section#comoJogar div#containerPassos div.passos:nth-child(4) {
+        grid-area: tutorial;
+    }
+
+    /* |--- TUTORIAL PASSOS ---| */
+
+    main section#comoJogar div#containerPassos div.passos h3 {
+        font-size: 1.5rem;
+    }
+
+    main section#comoJogar div#containerPassos div.passos p {
+        font-size: .85rem;
+    }
+
+    /* |--- SEÇÃO CONTATO (FORMULÁRIO) ---| */
+
+    main section#contato {
+        margin: 6rem auto 5rem auto;
+    }
+
+    main section#contato form {
+        width: 52rem;
+        padding: 6rem 1.9rem 3.2rem 1.9rem
+    }
+
+    main section#contato form h2 {
+        font-size: 2.3rem;
+    }
+
+    main section#contato form div#divNome input,
+    div#divEmail input {
+        font-size: .85rem;
+    }
+
+    main section#contato form div#divMensagem textarea {
+        height: 13rem;
+    }
+
+    /* <--- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER ---> */
+
+    /* |--- DIREITOS RESERVADOS ---| */
+
+    footer div#footer-container div#footerAutoral img {
+        width: 3.5rem;
+    }
+
+    footer div#footer-container div#footerAutoral p#copyright {
+        font-size: .95rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* <--- HEADER --- HEADER --- HEADER --- HEADER --- HEADER --- HEADER ---> */
+
+    /* |--- OPÇÕES DO MENU ---| */
+
+    header div#containerHeader {
+        padding: 0 3.5rem;
+    }
+
+    header div#containerHeader div#menuDrop ul#ulMenu li a {
+        width: 9rem;
+        font-size: .9rem;
+    }
+
+    /* <--- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN ---> */
+
+    /* |--- SEÇÃO INICIO (APRESENTA O SERVIDOR) ---| */
+
+    main section#inicio {
+        height: 55rem;
+        background-size: 35.5rem;
+    }
+
+    main section#inicio h1 {
+        width: 53rem;
+        font-size: 5rem;
+        line-height: 5.5rem;
+    }
+
+    /* |--- SEÇÃO DADOS (ESTATÍSTICAS DO SERVIDOR) ---| */
+
+    main section#dados h2 {
+        font-size: 3.5rem;
+    }
+
+    main section#dados svg.rabisco {
+        display: block;
+    }
+
+    main section#dados h2 svg {
+        height: 2rem;
+        stroke-width: 6;
+
+        transform: rotate(-45deg);
+
+        position: absolute;
+        top: -.16rem;
+        left: -2.05rem;
+    }
+
+    main section#dados div#containerDadosMedia div.divDadosMedia h3 {
+        font-size: 3.5rem;
+    }
+
+    main section#dados div#containerDadosMedia div.divDadosMedia p {
+        font-size: 1.2rem;
+    }
+
+    main section#dados div#promover h3 {
+        font-size: 2.2rem;
+    }
+
+    main section#dados div#promover h3 svg {
+        height: 1.6rem;
+        stroke-width: 6;
+
+        transform: rotate(60deg);
+
+        position: absolute;
+        top: -.45rem;
+        right: -1.45rem;
+    }
+
+    main section#dados div#promover p {
+        width: 50rem;
+        font-size: .95rem;
+    }
+
+    main section#dados svg#rabisco1 {
+        height: 12rem;
+        stroke-width: 6;
+
+        position: absolute;
+        top: 19%;
+        left: 50%;
+        transform: translateX(-33rem) rotate(19deg);
+    }
+
+    main section#dados svg#rabisco2 {
+        height: 17rem;
+        stroke-width: 3;
+
+        position: absolute;
+        top: 39%;
+        right: 50%;
+        transform: translateX(33rem);
+    }
+
+    /* |--- SEÇÃO VIP (MOSTRA OS VIPS DA CIDADE) ---| */
+
+    main section#vip div#vip-container h2 {
+        font-size: 3.5rem;
+    }
+
+    main section#vip div#vip-container>p {
+        width: 20rem;
+        height: 34.8rem;
+        padding-top: 3rem;
+        font-size: .95rem;
+        line-height: 1.25rem;
+    }
+
+    main section#vip div#vip-container>p::before {
+        font-size: 1.4rem;
+    }
+
+    /* |--- CONTAINER DE TODOS OS SLIDES (CARROS - MOTOS - ETC) ---| */
+
+    main section#vip div#vip-container div#containerSlides {
+        width: 50rem;
+    }
+
+    /* |--- CONTAINER DE CADA SLIDE ---| */
+
+    main section#vip div#vip-container div#containerSlides div.slide {
+        height: 17rem;
+    }
+
+    /* |--- BOTÃO CONFIRA MAIS ---| */
+
+    main section#vip div#vip-container div#containerSlides a {
+        width: 20rem;
+        left: -21rem;
+    }
+
+    /* |--- SEÇÃO COMO JOGAR (ENSINA COMO JOGAR NO SERVIDOR) ---| */
+
+    main section#comoJogar h2 {
+        font-size: 3.5rem;
+    }
+
+    main section#comoJogar div#containerPassos {
+        gap: 0 2rem;
+    }
+
+    main section#comoJogar div#containerPassos div.passos {
+        width: 31rem;
+    }
+
+    /* |--- VÍDEO TUTORIAL ---| */
+
+    main section#comoJogar div#containerPassos div.passos:nth-child(4) {
+        width: 36.8rem;
+        height: 100%;
+    }
+
+    /* |--- SEÇÃO CONTATO (FORMULÁRIO) ---| */
+
+    main section#contato form {
+        width: 57rem;
+        padding: 7rem 2rem 3.2rem 2rem
+    }
+
+    main section#contato form h2 {
+        font-size: 2.6rem;
+    }
+
+    main section#contato form div#divNome input,
+    div#divEmail input {
+        font-size: .9rem;
+    }
+
+    main section#contato form div#divMensagem textarea {
+        height: 15rem;
+    }
+
+    /* <--- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER ---> */
+
+    footer {
+        height: 13rem;
+    }
+
+    footer div#footer-container {
+        row-gap: 3rem;
+    }
+
+    /* |--- LINKS MEDIAS SOCIAIS ---| */
+
+    footer div#footer-container div#footerSocial {
+        column-gap: 3rem;
+    }
+
+    /* |--- DIREITOS RESERVADOS ---| */
+
+    footer div#footer-container div#footerAutoral img {
+        width: 4rem;
+    }
+
+    footer div#footer-container div#footerAutoral p#copyright {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1500px) {
+    /* <--- HEADER --- HEADER --- HEADER --- HEADER --- HEADER --- HEADER ---> */
+
+    header div#containerHeader {
+        height: 5.5rem;
+    }
+
+    /* |--- LOGO ---| */
+
+    header div#containerHeader a#logo {
+        width: 4rem;
+    }
+
+    header div#containerHeader div#menuDrop ul#ulMenu li a {
+        width: 10rem;
+        font-size: 1rem;
+    }
+
+    /* <--- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN ---> */
+
+    main {
+        margin-top: 5.5rem;
+        /* DEVE TER O MESMO TAMANHO QUE O header */
+    }
+
+    /* |--- SEÇÃO INICIO (APRESENTA O SERVIDOR) ---| */
+
+    main section#inicio h1 {
+        width: 63rem;
+        font-size: 6rem;
+        line-height: 6.5rem;
+    }
+
+    main section#inicio div#containerSocial {
+        column-gap: 3rem;
+    }
+
+    main section#inicio div#containerSocial p {
+        font-weight: 300;
+        font-size: 1rem;
+        letter-spacing: 1rem;
+        padding-left: 1rem;
+    }
+
+    main section#inicio div#containerSocial div {
+        width: 3.3rem;
+        height: 3.3rem;
+    }
+
+    main section#inicio div#containerSocial div a svg {
+        width: calc(3.3rem / 2);
+        height: calc(3.3rem / 2);
+    }
+
+    /* |--- SEÇÃO DADOS (ESTATÍSTICAS DO SERVIDOR) ---| */
+
+    main section#dados {
+        padding-bottom: 5rem;
+    }
+
+    main section#dados h2 {
+        font-size: 4rem;
+        margin-top: 4rem;
+    }
+
+    main section#dados h2 svg {
+        top: -.09rem;
+        left: -2.07rem;
+    }
+
+    main section#dados>p {
+        width: 46rem;
+        margin-top: 3rem;
+        font-size: 1rem;
+    }
+
+    main section#dados div#containerDadosMedia {
+        gap: 4rem 12rem;
+    }
+
+    main section#dados div#containerDadosMedia div.divDadosMedia h3 {
+        font-size: 4rem;
+    }
+
+    main section#dados div#promover h3 svg {
+        top: -.4rem;
+    }
+
+    main section#dados div#containerDadosMedia div.divDadosMedia p {
+        font-size: 1.3rem;
+    }
+
+    main section#dados div#promover h3 {
+        font-size: 2.3rem;
+    }
+
+    main section#dados div#promover p {
+        width: 51rem;
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    main section#dados svg#rabisco1 {
+        transform: translateX(-36rem) rotate(19deg);
+    }
+
+    main section#dados svg#rabisco2 {
+        transform: translateX(41rem);
+    }
+
+    /* |--- SEÇÃO VIP (MOSTRA OS VIPS DA CIDADE) ---| */
+
+    main section#vip div#vip-container {
+        padding: 12rem 0 7.5rem 0;
+    }
+
+    main section#vip div#vip-container h2 {
+        font-size: 4rem;
+        top: 5%;
+    }
+
+    main section#vip div#vip-container>p {
+        width: 23rem;
+        height: 41rem;
+        padding-top: 3.5rem;
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+
+        background-size: 4rem;
+        background-position: left 11% bottom 34%;
+    }
+
+    main section#vip div#vip-container>p::before {
+        font-size: 1.5rem;
+    }
+
+    main section#vip div#vip-container>p::after {
+        font-size: 3rem;
+
+        left: 29%;
+        bottom: 34%;
+    }
+
+    /* |--- CONTAINER DE TODOS OS SLIDES (CARROS - MOTOS - ETC) ---| */
+
+    main section#vip div#vip-container div#containerSlides {
+        width: 60rem;
+        gap: 1rem;
+    }
+
+    main section#vip div#vip-container div#containerSlides div.slide {
+        height: 20rem;
+    }
+
+    /* |--- BOTÃO CONFIRA MAIS ---| */
+
+    main section#vip div#vip-container div#containerSlides a {
+        width: 23rem;
+
+        left: -24rem;
+    }
+
+    /* |--- SEÇÃO COMO JOGAR (ENSINA COMO JOGAR NO SERVIDOR) ---| */
+
+    main section#comoJogar {
+        padding-bottom: 6rem;
+    }
+
+    main section#comoJogar h2 {
+        font-size: 4rem;
+        margin: 6rem auto 3rem auto;
+    }
+
+    main section#comoJogar div#containerPassos {
+        gap: 0 3rem;
+    }
+
+    main section#comoJogar div#containerPassos div.passos {
+        width: 35rem;
+        margin-bottom: 2rem;
+    }
+
+    main section#comoJogar div#containerPassos div.passos h3 {
+        font-size: 1.7rem;
+    }
+
+    main section#comoJogar div#containerPassos div.passos p {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    /* |--- VÍDEO TUTORIAL ---| */
+
+    main section#comoJogar div#containerPassos div.passos:nth-child(4) {
+        width: 45.1rem;
+    }
+
+    /* |--- SEÇÃO CONTATO (FORMULÁRIO) ---| */
+
+    main section#contato form {
+        width: 65rem;
+        padding: 7rem 2rem 3rem 2rem;
+    }
+
+    main section#contato form h2 {
+        font-size: 3rem;
+
+        top: 6%;
+    }
+
+    main section#contato form div#divNome input,
+    div#divEmail input {
+        font-size: 1rem;
+    }
+
+    main section#contato form div#divMensagem textarea {
+        height: 17rem;
+    }
+
+    main section#contato form button {
+        width: 9rem;
+        height: 3rem;
+    }
+
+    /* <--- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER ---> */
+
+    footer {
+        height: 13rem;
+    }
+
+    footer div#footer-container {
+        width: 90%;
+        row-gap: 3rem;
+    }
+
+    /* |--- LINKS MEDIAS SOCIAIS ---| */
+
+    footer div#footer-container div#footerSocial a {
+        width: 1.6rem;
+    }
+
+    /* |--- DIREITOS RESERVADOS ---| */
+
+    footer div#footer-container div#footerAutoral {
+        gap: 0 .5rem;
+    }
+}

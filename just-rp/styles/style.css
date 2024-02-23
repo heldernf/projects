@@ -1,0 +1,999 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "Skylight-Graffiti";
+    src: url(..//fonts/Skylight-Graffiti.ttf);
+}
+
+:root {
+    --white: white;
+    --gray: #b5b5b4;
+    --black: black;
+    --color-1: #e4ad0e;
+    --color-2: #0f1016;
+    --color-3: #151825;
+    --color-4: #3d4569;
+}
+
+/* <--- OUTROS --- OUTROS --- OUTROS --- OUTROS --- OUTROS --- OUTROS ---> */
+
+/* GERAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* QUANDO NAVEGAR COM O TAB*/
+*:focus-visible {
+    outline: .15rem solid var(--color-1);
+}
+
+/* DECORA O <a> SELECIONADO NO MENU */
+.decorationLinkSelected {
+    color: var(--white) !important;
+    font-weight: 800 !important;
+}
+
+/* SEPARA AS SECTIONS */
+svg.separador {
+    width: 95%;
+
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* <--- INÍCIO --- INÍCIO --- INÍCIO --- INÍCIO --- INÍCIO --- INÍCIO ---> */
+
+html {
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    background-color: var(--color-3);
+    width: .45rem;
+
+    display: none;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--color-1);
+    border-radius: .3rem;
+}
+
+body {
+    background-color: var(--color-2);
+}
+
+/* <--- HEADER --- HEADER --- HEADER --- HEADER --- HEADER --- HEADER ---> */
+
+header {
+    background-color: rgba(13, 14, 20, 0.7);
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+header div#containerHeader {
+    backdrop-filter: blur(.1rem);
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 4rem;
+    padding: 0 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* |--- LOGO ---| */
+
+header div#containerHeader a#logo {
+    width: 2.5rem;
+    min-height: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header div#containerHeader a#logo img {
+    width: 100%;
+}
+
+/* |--- MENU TRÊS TRACINHO ---| */
+
+header div#containerHeader div#menuDrop button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 1.4rem;
+
+    display: block;
+}
+
+header div#containerHeader div#menuDrop button svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--white);
+
+    display: block;
+}
+
+/* |--- OPÇÕES DO MENU ---| */
+
+header div#containerHeader div#menuDrop ul#ulMenu {
+    transform: scale(0);
+    list-style: none;
+    transition: .3s;
+
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+}
+
+header div#containerHeader div#menuDrop ul#ulMenu li {
+    background-color: rgba(13, 14, 20, 0.7);
+    margin-top: 1px;
+}
+
+header div#containerHeader div#menuDrop ul#ulMenu li a {
+    width: 9rem;
+    height: 2.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: -.065rem;
+    text-decoration: none;
+    color: var(--gray);
+    fill: var(--color-1);
+    transition: .3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .3rem;
+}
+
+header div#containerHeader div#menuDrop ul#ulMenu li a:hover {
+    background-color: var(--color-1);
+    color: var(--white);
+    fill: var(--white);
+}
+
+header div#containerHeader div#menuDrop ul#ulMenu li a svg {
+    height: .95rem;
+}
+
+/* <--- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN --- MAIN ---> */
+
+main {
+    max-width: 1600px;
+    margin: auto;
+    margin-top: 4rem;
+    /* DEVE TER O MESMO TAMANHO QUE O header */
+    padding-top: .5rem;
+
+    position: relative;
+}
+
+/* |--- SEÇÃO INICIO (APRESENTA O SERVIDOR) ---| */
+
+main section#inicio {
+    height: 31rem;
+    background-image: url(..//img/avatar-mulher-beijo.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 20rem;
+
+    position: relative;
+}
+
+main section#inicio::before {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+    filter: blur(6rem);
+    background-color: var(--color-1);
+
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+main section#inicio h1 {
+    width: 19rem;
+    border-radius: .4rem;
+    color: var(--white);
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+
+    position: absolute;
+    top: 45%;
+    left: 50%;
+
+    animation: h1Balance 1s ease-in-out 0s infinite alternate none;
+}
+
+main section#inicio h1 span {
+    text-decoration: underline;
+    text-decoration-color: var(--color-1);
+}
+
+@keyframes h1Balance {
+    from {
+        transform: translateY(-3%) translateX(-50%);
+    }
+
+    to {
+        transform: translateY(3%) translateX(-50%);
+    }
+}
+
+main section#inicio div#containerSocial {
+    display: flex;
+    column-gap: 1.5rem;
+
+    position: absolute;
+    bottom: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main section#inicio div#containerSocial p {
+    width: 100vw;
+    color: var(--white);
+    font-weight: 600;
+    font-size: .6875rem;
+    letter-spacing: .5rem;
+    text-align: center;
+    padding-left: .5rem;
+
+    position: absolute;
+    top: -65%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+main section#inicio div#containerSocial div {
+    width: 3rem;
+    height: 3rem;
+}
+
+main section#inicio div#containerSocial div a {
+    width: 100%;
+    height: 100%;
+    fill: var(--white);
+    border: .2rem solid var(--color-4);
+    border-radius: .4rem;
+    transition: .3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #151825;
+}
+
+main section#inicio div#containerSocial div a:hover {
+    animation: balanceSocialInicio .5s ease-in-out 0s 1 forwards;
+    transition: .3s;
+}
+
+@keyframes balanceSocialInicio {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        transform: rotate(15deg);
+    }
+
+    75% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+main section#inicio div#containerSocial div a svg {
+    width: calc(3rem / 2);
+    height: calc(3rem / 2);
+    transition: .3s;
+}
+
+/* |--- SEÇÃO DADOS (ESTATÍSTICAS DO SERVIDOR) ---| */
+
+main section#dados {
+    padding-bottom: 2.3rem;
+
+    position: relative;
+}
+
+main section#dados svg.rabisco {
+    display: none;
+}
+
+main section#dados h2 {
+    width: max-content;
+    margin: 2rem auto 0 auto;
+    color: var(--white);
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    position: relative;
+}
+
+main section#dados h2 span {
+    color: var(--color-1);
+    text-decoration: underline;
+    text-decoration-color: var(--color-1);
+}
+
+main section#dados>p {
+    width: 18rem;
+    margin: 2rem auto 0 auto;
+    color: var(--white);
+    font-size: .9rem;
+    text-align: center;
+    line-height: 1rem;
+}
+
+main section#dados>p span {
+    color: var(--color-1);
+    font-weight: 500;
+}
+
+main section#dados div#containerDadosMedia div.divDadosMedia {
+    margin-top: 1.5rem;
+
+    position: relative;
+}
+
+main section#dados div#containerDadosMedia div.divDadosMedia h3 {
+    color: var(--color-1);
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+main section#dados div#containerDadosMedia div.divDadosMedia p {
+    color: var(--white);
+    text-align: center;
+    font-weight: 600;
+
+    width: 100%;
+    position: absolute;
+    top: calc(100% + .5rem);
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+main section#dados div#promover h3 {
+    width: max-content;
+    margin: 2rem auto 0 auto;
+
+    border-radius: .3rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    position: relative;
+}
+
+main section#dados div#promover h3 span {
+    color: var(--color-1);
+    text-decoration: underline;
+}
+
+main section#dados div#promover p {
+    width: 18.5rem;
+    margin: .5rem auto 0 auto;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+    line-height: 1rem;
+    font-size: .85rem;
+}
+
+main section#dados div#promover p span {
+    color: var(--color-1);
+    font-weight: 600;
+}
+
+main section#dados div#promover p a {
+    text-decoration-color: var(--color-1);
+}
+
+/* |--- SEÇÃO VIP (MOSTRA OS VIPS DA CIDADE) ---| */
+
+main section#vip {
+    padding-bottom: 2.3rem;
+
+    position: relative;
+}
+
+main section#vip div#vip-container h2 {
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: 800;
+
+    width: max-content;
+    margin: 1.7rem auto 1.5rem auto;
+}
+
+main section#vip div#vip-container h2 span {
+    color: var(--color-1);
+    text-decoration: underline;
+    text-decoration-color: var(--color-1);
+}
+
+main section#vip div#vip-container>p {
+    width: 17.5rem;
+    margin: 0 auto;
+    color: var(--white);
+    font-weight: 600;
+    text-align: center;
+    font-size: .85rem;
+    line-height: 1rem;
+    background-color: var(--color-3);
+    padding: .8rem;
+    border-radius: 0.4rem;
+}
+
+main section#vip div#vip-container>p span {
+    color: var(--color-1);
+    font-weight: 700;
+}
+
+main section#vip div#vip-container>p a {
+    text-decoration-color: var(--color-1);
+}
+
+/* |--- CONTAINER DE TODOS OS SLIDES (CARROS - MOTOS - ETC) ---| */
+
+main section#vip div#vip-container div#containerSlides {
+    width: 18rem;
+    margin: auto;
+}
+
+/* |--- CONTAINER DE CADA SLIDE ---| */
+
+main section#vip div#vip-container div#containerSlides div.slide {
+    width: 100%;
+    height: 13rem;
+    border-radius: .4rem;
+    overflow: hidden;
+
+    position: relative;
+    border: .13rem solid var(--color-3);
+}
+
+main section#vip div#vip-container div#containerSlides div.slide:not(:nth-child(4)) {
+    margin: 2rem 0;
+}
+
+/* |--- h3 DE TODOS OS SLIDES ---| */
+
+main section#vip div#vip-container div#containerSlides div.slide h3 {
+    background-color: var(--color-3);
+    color: var(--white);
+    font-size: 1rem;
+    padding: 0 .5rem;
+    border-radius: .0rem .0rem .3rem .3rem;
+
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* |--- INPUTS / QUANDO O INPUT FOR CHECKED ---| */
+
+main section#vip div#vip-container div#containerSlides input {
+    display: none;
+}
+
+/* |--- CARROS ---| */
+input#slideCarro1:checked~div#carros {
+    margin-left: 0%;
+}
+
+input#slideCarro2:checked~div#carros {
+    margin-left: -100%;
+}
+
+input#slideCarro3:checked~div#carros {
+    margin-left: -200%;
+}
+
+input#slideCarro1:checked~div.controleSlide label[for=slideCarro1],
+input#slideCarro2:checked~div.controleSlide label[for=slideCarro2],
+input#slideCarro3:checked~div.controleSlide label[for=slideCarro3] {
+    background-color: var(--white);
+}
+
+/* |--- MOTOS ---| */
+input#slideMoto1:checked~div#motos {
+    margin-left: 0%;
+}
+
+input#slideMoto2:checked~div#motos {
+    margin-left: -100%;
+}
+
+input#slideMoto3:checked~div#motos {
+    margin-left: -200%;
+}
+
+input#slideMoto1:checked~div.controleSlide label[for=slideMoto1],
+input#slideMoto2:checked~div.controleSlide label[for=slideMoto2],
+input#slideMoto3:checked~div.controleSlide label[for=slideMoto3] {
+    background-color: var(--white);
+}
+
+/* |--- VIP ---| */
+input#slideVip1:checked~div#vips {
+    margin-left: 0%;
+}
+
+input#slideVip2:checked~div#vips {
+    margin-left: -100%;
+}
+
+input#slideVip3:checked~div#vips {
+    margin-left: -200%;
+}
+
+input#slideVip1:checked~div.controleSlide label[for=slideVip1],
+input#slideVip2:checked~div.controleSlide label[for=slideVip2],
+input#slideVip3:checked~div.controleSlide label[for=slideVip3] {
+    background-color: var(--white);
+}
+
+/* |--- OUTROS ---| */
+input#slideOutro1:checked~div#outros {
+    margin-left: 0%;
+}
+
+input#slideOutro2:checked~div#outros {
+    margin-left: -100%;
+}
+
+input#slideOutro3:checked~div#outros {
+    margin-left: -200%;
+}
+
+input#slideOutro1:checked~div.controleSlide label[for=slideOutro1],
+input#slideOutro2:checked~div.controleSlide label[for=slideOutro2],
+input#slideOutro3:checked~div.controleSlide label[for=slideOutro3] {
+    background-color: var(--white);
+}
+
+/* |--- CONTROLE DOS SLIDES ---| */
+
+main section#vip div#vip-container div#containerSlides div.slide div.controleSlide {
+    display: flex;
+    column-gap: .2rem;
+
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+main section#vip div#vip-container div#containerSlides div.slide div.controleSlide label {
+    width: 1.3rem;
+    height: .6rem;
+    border: .1rem solid var(--white);
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+/* |--- IMAGEM DOS SLIDES ---| */
+
+main section#vip div#vip-container div#containerSlides div.slide div.slideImg {
+    width: calc(100% * 3);
+    height: 100%;
+    transition: .5s;
+
+    position: absolute;
+    display: flex;
+    z-index: -1;
+}
+
+main section#vip div#vip-container div#containerSlides div.slide div.slideImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 70%;
+}
+
+main section#vip div#vip-container div#containerSlides div.slide:nth-child(3) div.slideImg img {
+    object-position: 0 68%;
+}
+
+main section#vip div#vip-container div#containerSlides div.slide:nth-child(4) div.slideImg img {
+    object-position: 0 58%;
+}
+
+/* |--- BOTÃO CONFIRA MAIS ---| */
+
+main section#vip div#vip-container div#containerSlides a {
+    background-color: var(--color-3);
+    width: max-content;
+    padding: .7rem 1rem;
+    display: block;
+    box-shadow: .3rem .3rem .3rem #0000005b;
+    border: none;
+    border-radius: .2rem;
+    margin: 2rem auto 0 auto;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: .1rem;
+    transition: .3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+main section#vip div#vip-container div#containerSlides a svg {
+    fill: var(--white);
+    height: 1rem;
+}
+
+main section#vip div#vip-container div#containerSlides a:hover {
+    background-color: #181b29;
+}
+
+main section#vip div#vip-container div#containerSlides a:active {
+    transform: scale(.95);
+}
+
+/* |--- SEÇÃO COMO JOGAR (ENSINA COMO JOGAR NO SERVIDOR) ---| */
+
+main section#comoJogar {
+    padding-bottom: 3rem;
+
+    position: relative;
+}
+
+main section#comoJogar h2 {
+    width: max-content;
+    margin: 2.3rem auto;
+
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+main section#comoJogar h2 span {
+    color: var(--color-1);
+    text-decoration: underline;
+    text-decoration-color: var(--color-1);
+}
+
+/* |--- PASSOS PARA JOGAR NO SERVIDOR ---| */
+
+main section#comoJogar div#containerPassos div.passos {
+    background-color: var(--color-3);
+    width: 17.5rem;
+    margin: 0 auto 2rem auto;
+    padding: .5rem 1rem 1rem 1rem;
+    border-radius: .4rem;
+    overflow: hidden;
+
+    position: relative;
+}
+
+main section#comoJogar div#containerPassos div.passos:nth-child(4) {
+    margin-bottom: 0;
+    padding: 1rem;
+    overflow: visible;
+}
+
+main section#comoJogar div#containerPassos div.passos::before {
+    content: '';
+    background-color: var(--color-4);
+    width: .1rem;
+    height: 35%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+main section#comoJogar div#containerPassos div.passos::after {
+    content: '';
+    background-color: var(--color-4);
+    width: .1rem;
+    height: 35%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+main section#comoJogar div#containerPassos div.passos h3 {
+    color: var(--color-1);
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+main section#comoJogar div#containerPassos div.passos p {
+    color: var(--white);
+    line-height: 1rem;
+    font-size: .9rem;
+    font-weight: 500;
+    margin-top: .5rem;
+}
+
+main section#comoJogar div#containerPassos div.passos p span {
+    color: var(--color-1);
+    font-weight: 600;
+}
+
+main section#comoJogar div#containerPassos div.passos p a {
+    text-decoration-color: var(--color-1);
+}
+
+/* |--- VÍDEO TUTORIAL ---| */
+
+main section#comoJogar div#containerPassos div.passos:nth-child(4)::before {
+    top: .3rem;
+    border-radius: 1rem;
+}
+
+main section#comoJogar div#containerPassos div.passos:nth-child(4)::after {
+    bottom: .3rem;
+    border-radius: 1rem;
+}
+
+main section#comoJogar div#containerPassos div.passos div#containerTutorial {
+    width: 100%;
+    height: 100%;
+    border-radius: .2rem;
+    overflow: hidden;
+}
+
+main section#comoJogar div#containerPassos div.passos div#containerTutorial iframe {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+}
+
+main section#comoJogar div#containerPassos div.passos div#containerTutorial svg {
+    width: 3rem;
+    stroke: var(--color-1);
+
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -40%) rotate(-5deg);
+}
+
+/* |--- SEÇÃO CONTATO (FORMULÁRIO) ---| */
+
+main section#contato {
+    margin: 3rem auto;
+}
+
+main section#contato form {
+    width: 18rem;
+    margin: auto;
+    padding: 5rem 1.5rem 1rem 1.5rem;
+    border: .7rem solid #14161f;
+
+    position: relative;
+}
+
+main section#contato form svg {
+    stroke: var(--color-1);
+
+    position: absolute;
+    top: -6.3%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-7deg);
+}
+
+main section#contato form h2 {
+    width: 100%;
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-align: center;
+
+    position: absolute;
+    top: 8%;
+    left: 0;
+}
+
+main section#contato form div#divNome,
+div#divEmail,
+div#divMensagem {
+    margin-bottom: 1rem;
+    padding: .35rem .7rem;
+    background-color: var(--color-3);
+
+    position: relative;
+}
+
+
+main section#contato form div#divNome input::placeholder,
+div#divEmail input::placeholder {
+    color: var(--color-4);
+}
+
+main section#contato form div#divNome label,
+div#divEmail label,
+div#divMensagem label {
+    color: var(--white);
+    font-size: .9rem;
+    font-weight: 800;
+    color: var(--color-4);
+
+    display: block;
+    width: 100%;
+}
+
+main section#contato form div#divNome input,
+div#divEmail input {
+    background-color: unset;
+    color: #dbe2ff;
+    font-size: .75rem;
+    border: none;
+
+    display: block;
+    width: 100%;
+}
+
+main section#contato form div#divNome input,
+div#divEmail input:focus-visible {
+    outline: none;
+}
+
+main section#contato form div#divMensagem textarea {
+    width: 100%;
+    height: 9rem;
+    resize: none;
+    background-color: var(--color-3);
+    border: none;
+    color: #dbe2ff;
+    overflow-y: auto;
+
+    display: block;
+}
+
+main section#contato form div#divMensagem textarea::placeholder {
+    color: var(--color-4);
+}
+
+main section#contato form div#divMensagem textarea:focus-visible {
+    outline: none;
+}
+
+main section#contato form div#divMensagem textarea::-webkit-scrollbar {
+    width: .6rem;
+    border-radius: .4rem;
+    background-color: var(--color-4);
+}
+
+main section#contato form div#divMensagem textarea::-webkit-scrollbar-thumb {
+    border-radius: .4rem;
+    background-color: var(--color-1);
+}
+
+main section#contato form button {
+    width: 7rem;
+    height: 2rem;
+    background-color: var(--color-1);
+    border: none;
+    margin: auto;
+    color: var(--white);
+    font-size: .8rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: box-shadow .3s;
+    box-shadow: 0 0 .5rem #e4ad0e67;
+
+    display: block;
+}
+
+main section#contato form button:hover {
+    box-shadow: 0 0 .7rem #e4ad0e83;
+}
+
+/* <--- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER --- FOOTER ---> */
+
+footer {
+    background-color: #11141f;
+    width: 100%;
+    height: 10rem;
+}
+
+footer div#footer-container {
+    height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2.2rem;
+}
+
+/* |--- LINKS MEDIAS SOCIAIS ---| */
+
+footer div#footer-container div#footerSocial {
+    padding: .5rem .6rem;
+    border: .3rem solid var(--color-3);
+    border-radius: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+footer div#footer-container div#footerSocial a {
+    width: 1.4rem;
+    transition: .3s;
+}
+
+footer div#footer-container div#footerSocial a:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 .2rem #ffffff4f);
+}
+
+footer div#footer-container div#footerSocial a svg {
+    fill: var(--white);
+
+    display: block;
+}
+
+/* |--- DIREITOS RESERVADOS ---| */
+
+footer div#footer-container div#footerAutoral {
+    display: flex;
+    justify-content: center;
+    gap: 0 .3rem;
+}
+
+footer div#footer-container div#footerAutoral img {
+    width: 2rem;
+}
+
+footer div#footer-container div#footerAutoral p#copyright {
+    color: var(--gray);
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+}

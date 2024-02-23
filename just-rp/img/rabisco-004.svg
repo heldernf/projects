@@ -1,0 +1,12 @@
+<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <g>
+        <path id="svg_1" stroke-linecap="round" stroke="#3d4569" stroke-width="4" fill="none"
+            d="m4.45289,21.51314c3.8296,4.92377 15.00448,19.29148 18.83408,24.21524" />
+        <path transform="rotate(37.0037 30.6653 27.9065)" id="svg_2" stroke-linecap="round"
+            stroke="#3d4569" stroke-width="4" fill="none"
+            d="m21.24826,15.79886c3.8296,4.92377 15.00448,19.29148 18.83408,24.21524" />
+        <path transform="rotate(69.6793 46.7271 32.4779)" id="svg_4" stroke-linecap="round"
+            stroke="#3d4569" stroke-width="4" fill="none"
+            d="m37.31003,20.37029c3.8296,4.92377 15.00448,19.29148 18.83408,24.21524" />
+    </g>
+</svg>

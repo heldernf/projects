@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just RP</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/medias-queries.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div id="containerHeader">
+            <a id="logo" href="index.html">
+                <img src="img/logo_just.png" alt="logo">
+            </a>
+            <div id="menuDrop">
+                <button onclick="menuDrop()"> <!-- colocar um add event listener -->
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0,0,256,256">
+                        <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <g transform="scale(5.12,5.12)">
+                                <path d="M0,7.5v5h50v-5zM0,22.5v5h50v-5zM0,37.5v5h50v-5z"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <ul id="ulMenu">
+                    <li>
+                        <a href="#inicio" class="aMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M12.74 2.32a1 1 0 0 0-1.48 0l-9 10A1 1 0 0 0 3 14h2v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1 1 1 0 0 0-.26-.68z">
+                                </path>
+                            </svg>
+                            Início
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#dados" class="aMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM9 18H7v-6h2v6zm4 0h-2V7h2v11zm4 0h-2v-8h2v8z" />
+                            </svg>
+                            Dados
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#vip" class="aMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="transform: msFilter;">
+                                <path d="m21 2-5 5-4-5-4 5-5-5v13h18zM5 21h14a2 2 0 0 0 2-2v-2H3v2a2 2 0 0 0 2 2z">
+                                </path>
+                            </svg>
+                            VIP
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#comoJogar" class="aMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path
+                                    d="M480-240q21 0 35.5-14.5T530-290q0-21-14.5-35.5T480-340q-21 0-35.5 14.5T430-290q0 21 14.5 35.5T480-240Zm-36-154h74q0-36 8-53t34-43q35-35 49.5-58.5T624-602q0-53-36-85.5T491-720q-55 0-93.5 27T344-618l66 26q7-27 28-43.5t49-16.5q27 0 45 14.5t18 38.5q0 17-11 36t-37 42q-33 29-45.5 55.5T444-394ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Z" />
+                            </svg>
+                            Como Jogar
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contato" class="aMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z" />
+                            </svg>
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main onclick="closeMenuDropClickMain()">
+        <section id="inicio">
+            <h1>O MELHOR SERVIDOR TEMA <span>PRÓPRIO</span>!</h1>
+            <div id="containerSocial">
+                <p>NOSSAS REDES SOCIAIS</p>
+
+                <div>
+                    <a href="https://www.instagram.com/cidadejust/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                            <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <g transform="scale(8.53333,8.53333)">
+                                    <path
+                                        d="M9.99805,3c-3.859,0 -6.99805,3.14195 -6.99805,7.00195v10c0,3.859 3.14195,6.99805 7.00195,6.99805h10c3.859,0 6.99805,-3.14195 6.99805,-7.00195v-10c0,-3.859 -3.14195,-6.99805 -7.00195,-6.99805zM22,7c0.552,0 1,0.448 1,1c0,0.552 -0.448,1 -1,1c-0.552,0 -1,-0.448 -1,-1c0,-0.552 0.448,-1 1,-1zM15,9c3.309,0 6,2.691 6,6c0,3.309 -2.691,6 -6,6c-3.309,0 -6,-2.691 -6,-6c0,-3.309 2.691,-6 6,-6zM15,11c-2.20914,0 -4,1.79086 -4,4c0,2.20914 1.79086,4 4,4c2.20914,0 4,-1.79086 4,-4c0,-2.20914 -1.79086,-4 -4,-4z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://www.tiktok.com/@cidade.just.rp" target="_blank">
+                        <svg viewBox="0 0 512 512" id="icons" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z">
+                                </path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                            <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <g transform="scale(10.66667,10.66667)">
+                                    <path
+                                        d="M21.582,6.186c-0.23,-0.86 -0.908,-1.538 -1.768,-1.768c-1.56,-0.418 -7.814,-0.418 -7.814,-0.418c0,0 -6.254,0 -7.814,0.418c-0.86,0.23 -1.538,0.908 -1.768,1.768c-0.418,1.56 -0.418,5.814 -0.418,5.814c0,0 0,4.254 0.418,5.814c0.23,0.86 0.908,1.538 1.768,1.768c1.56,0.418 7.814,0.418 7.814,0.418c0,0 6.254,0 7.814,-0.418c0.861,-0.23 1.538,-0.908 1.768,-1.768c0.418,-1.56 0.418,-5.814 0.418,-5.814c0,0 0,-4.254 -0.418,-5.814zM10,14.598v-5.196c0,-0.385 0.417,-0.625 0.75,-0.433l4.5,2.598c0.333,0.192 0.333,0.674 0,0.866l-4.5,2.598c-0.333,0.193 -0.75,-0.048 -0.75,-0.433z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="https://discord.gg/cidadejust" target="_blank">
+                        <svg viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                            <g>
+                                <path
+                                    d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+                                    fill-rule="nonzero">
+
+                                </path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <svg width="1500" height="24" class="separador" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                viewBox="0 0 1500 24">
+                <g>
+                    <path
+                        d="m2.43486,15.87546c37.08695,-0.13237 164.40084,-0.76001 250.0244,-0.89238c85.62358,-0.13237 286.39263,1.19133 327.21317,0c40.82054,-1.19133 -61.47689,-4.04458 -52.01848,-4.97117c9.45842,-0.92659 53.18865,-2.60947 115.7831,-1.2755c62.59445,1.33397 254.56442,11.15336 282.19296,9.96203c27.62854,-1.19133 -72.97712,-10.46924 -54.55810,-11.13109c18.41902,-0.66185 116.41998,-4.35179 166.69895,-3.29284c50.27895,1.05896 93.30045,2.77531 130.88521,3.56953c37.58478,0.79422 82.91925,1.78477 122.49525,1.78477c39.57602,0 110.60059,-2.55114 141.216,-2.81588c30.61541,-0.26473 55.97048,1.03111 65.17999,1.03111"
+                        fill="none" stroke-width="4" stroke-linecap="round" id="svg_1" stroke="#3d4569" />
+                </g>
+            </svg>
+        </section>
+
+        <section id="dados">
+            <h2>DADOS DOS
+                <span>JOGADORES</span>
+                <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 70 68"  class="rabisco">
+                    <g>
+                        <path id="svg_1" stroke-linecap="round" stroke="#3d4569" fill="none"
+                            d="m4.45289,21.51314c3.8296,4.92377 15.00448,19.29148 18.83408,24.21524" />
+                        <path transform="rotate(37.0037 30.6653 27.9065)" id="svg_2" stroke-linecap="round"
+                            stroke="#3d4569" fill="none"
+                            d="m21.24826,15.79886c3.8296,4.92377 15.00448,19.29148 18.83408,24.21524" />
+                        <path transform="rotate(69.6793 46.7271 32.4779)" id="svg_4" stroke-linecap="round"
+                            stroke="#3d4569" fill="none"
+                            d="m37.31003,20.37029c3.8296,4.92377 15.00448,19.29148 18.83408,24.21524" />
+                    </g>
+                </svg>
+            </h2>
+
+            <p>Os <span>dados</span> abaixo são <span>médias</span>, refletindo o comportamento regular e padrões de
+                atividade dos jogadores do nosso <span>servidor</span> ao longo do tempo.</p>
+
+            <div id="containerDadosMedia">
+                <div class="divDadosMedia">
+                    <h3>+250</h3>
+                    <p>USUÁRIOS SIMULTÂNEOS</p>
+                </div>
+                <div class="divDadosMedia">
+                    <h3>+1.500</h3>
+                    <p>USUÁRIOS DIARIAMENTE</p>
+                </div>
+                <div class="divDadosMedia">
+                    <h3>+45.000</h3>
+                    <p>USUÁRIOS MENSALMENTE</p>
+                </div>
+                <div class="divDadosMedia">
+                    <h3>+4h 57m</h3>
+                    <p>DIARIAMENTE POR PLAYER</p>
+                </div>
+            </div>
+
+            <div id="promover">
+                <h3>Promova sua
+                    <span>Marca!</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 4 60 50" class="rabisco">
+                        <g>
+                            <path id="svg_1" stroke-linecap="round" stroke="#3d4569" fill="none"
+                                d="m4.45289,21.51314c3.8296,4.92377 15.00448,19.29148 18.83408,24.21524" />
+                            <path transform="rotate(37.0037 30.6653 27.9065)" id="svg_2" stroke-linecap="round"
+                                stroke="#3d4569" fill="none"
+                                d="m21.24826,15.79886c3.8296,4.92377 15.00448,19.29148 18.83408,24.21524" />
+                            <path transform="rotate(69.6793 46.7271 32.4779)" id="svg_4" stroke-linecap="round"
+                                stroke="#3d4569" fill="none"
+                                d="m37.31003,20.37029c3.8296,4.92377 15.00448,19.29148 18.83408,24.21524" />
+                        </g>
+                    </svg>
+                </h3>
+
+                <p>
+                    <span>Venha conosco</span>, promova a sua marca em nosso
+                    <span>metaverso</span>. Aqui a sua <span>marca</span> será
+                    promovida por meio de <span>banners,vídeos e gifs</span> que
+                    estarão vísiveis para todos os que acessarem o nosso metaverso.
+                    Atigindo assim, uma ampla notoriedade para a sua marca!
+                    Ficou interassado? <a href="#contato"><span>Contate-nos</span></a>.
+                </p>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="590 0 210 400" id="rabisco1" class="rabisco">
+                <path
+                    d="M738.5650441552505 23.27567663288079C728.998526007464 31.945332750637952 674.7384348616307 51.37732051308912 681.1659352685317 75.29361333942376C687.5934356754327 99.2099061657584 775.7847503726983 140.91394287840487 777.1300465966567 166.7734335908886C778.4753428206151 192.63292430337233 689.6861379052505 196.967746640205 689.2377126122817 230.4505576143261C688.789287319313 263.9333685884472 789.985088100563 346.44458888467113 774.4394948388442 367.67029943561516C758.8939015771255 388.8960099865592 625.7100433414483 359.449067339261 595.9641530419692 357.80482091999016 "
+                    fill="none" stroke="#3d4569" stroke-linecap="round"
+                    transform="matrix(1.05,0,0,1.05,-31.637149047851608,-9.922435760498047)">
+                </path>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="325 0 150 400" id="rabisco2" class="rabisco">
+                <path
+                    d="M649.8065177369693 81.42326904791915C644.287833654938 86.78649704474532 586.2071207643131 139.65345530687097 586.1293937135318 143.30666901129806C586.0516666627506 146.95988271572514 650.5419537314355 117.51295481858972 648.9096671510318 123.57573486823165C647.2773805706282 129.63851491787358 569.2385178590396 207.19904404181563 567.2953177857975 213.26182343024337C565.3521177125554 219.3246028186711 625.944033199209 184.903077194078 626.4881278443912 193.53088165778243C627.0322224895734 202.15868612148685 578.1592818157453 302.47559397874613 573.5733329225162 312.8134133960639 "
+                    fill="none" stroke="#3d4569" stroke-linecap="round"
+                    transform="matrix(1.6207603342349723,0,0,1.6207603342349723,-586.2780692043326,-119.48158587438229)">
+                </path>
+            </svg>
+
+            <svg width="1500" height="24" class="separador" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                viewBox="0 0 1500 24">
+                <g>
+                    <path
+                        d="m2.43486,15.87546c37.08695,-0.13237 164.40084,-0.76001 250.0244,-0.89238c85.62358,-0.13237 286.39263,1.19133 327.21317,0c40.82054,-1.19133 -61.47689,-4.04458 -52.01848,-4.97117c9.45842,-0.92659 53.18865,-2.60947 115.7831,-1.2755c62.59445,1.33397 254.56442,11.15336 282.19296,9.96203c27.62854,-1.19133 -72.97712,-10.46924 -54.55810,-11.13109c18.41902,-0.66185 116.41998,-4.35179 166.69895,-3.29284c50.27895,1.05896 93.30045,2.77531 130.88521,3.56953c37.58478,0.79422 82.91925,1.78477 122.49525,1.78477c39.57602,0 110.60059,-2.55114 141.216,-2.81588c30.61541,-0.26473 55.97048,1.03111 65.17999,1.03111"
+                        fill="none" stroke-width="4" stroke-linecap="round" id="svg_1" stroke="#3d4569" />
+                </g>
+            </svg>
+        </section>
+
+        <section id="vip">
+            <div id="vip-container">
+                <h2>NOSSO <span>VIP</span></h2>
+                <p>
+                    Aqui na <span>Just</span>, a melhor cidade de <span>Roleplay</span>
+                    do <span>Brasil</span>, colaboradores tem direito a <span>benefícios</span>
+                    como forma de agradecimento por estarem colaborando com a cidade!
+                    Venha conosco, faça a sua <span>doação</span> ou confira mais <span>benefícios</span>
+                    clicando <a href="https://five-m.store/loja/just" target="_blank"><span>aqui</span></a>.
+                    Abaixo estão exemplos de <span>benefícios</span> por cada
+                    <span>doação</span> feita.
+                </p>
+                <div id="containerSlides">
+                    <div class="slide">
+                        <h3>CARROS</h3>
+                        <input type="radio" name="slideCarros" id="slideCarro1" class="inputSlide" checked>
+                        <input type="radio" name="slideCarros" id="slideCarro2" class="inputSlide">
+                        <input type="radio" name="slideCarros" id="slideCarro3" class="inputSlide">
+                        <div class="controleSlide">
+                            <label for="slideCarro1"></label>
+                            <label for="slideCarro2"></label>
+                            <label for="slideCarro3"></label>
+                        </div>
+                        <div class="slideImg" id="carros">
+                            <img src="img/subaru-imprenza.png" alt="">
+                            <img src="img/velar.png" alt="">
+                            <img src="img/mclarem-675.png" alt="">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <h3>MOTOS</h3>
+                        <input type="radio" name="slideMotos" id="slideMoto1" class="inputSlide" checked>
+                        <input type="radio" name="slideMotos" id="slideMoto2" class="inputSlide">
+                        <input type="radio" name="slideMotos" id="slideMoto3" class="inputSlide">
+                        <div class="controleSlide">
+                            <label for="slideMoto1"></label>
+                            <label for="slideMoto2"></label>
+                            <label for="slideMoto3"></label>
+                        </div>
+                        <div class="slideImg" id="motos">
+                            <img src="img/r1200.png" alt="">
+                            <img src="img/tiger1200.png" alt="">
+                            <img src="img/s1000rr.png" alt="">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <h3>PLANOS VIP</h3>
+                        <input type="radio" name="slideVips" id="slideVip1" class="inputSlide" checked>
+                        <input type="radio" name="slideVips" id="slideVip2" class="inputSlide">
+                        <input type="radio" name="slideVips" id="slideVip3" class="inputSlide">
+                        <div class="controleSlide">
+                            <label for="slideVip1"></label>
+                            <label for="slideVip2"></label>
+                            <label for="slideVip3"></label>
+                        </div>
+                        <div class="slideImg" id="vips">
+                            <img src="img/vip-basic.gif" alt="">
+                            <img src="img/vip-kids.gif" alt="">
+                            <img src="img/vip-pro.gif" alt="">
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <h3>OUTROS</h3>
+                        <input type="radio" name="slideOutros" id="slideOutro1" class="inputSlide" checked>
+                        <input type="radio" name="slideOutros" id="slideOutro2" class="inputSlide">
+                        <input type="radio" name="slideOutros" id="slideOutro3" class="inputSlide">
+                        <div class="controleSlide">
+                            <label for="slideOutro1"></label>
+                            <label for="slideOutro2"></label>
+                            <label for="slideOutro3"></label>
+                        </div>
+                        <div class="slideImg" id="outros">
+                            <img src="img/spotify.png" alt="">
+                            <img src="img/numero-personalizado.png" alt="">
+                            <img src="img/yatch.png" alt="">
+                        </div>
+                    </div>
+                    <a href="https://five-m.store/loja/just" target="_blank">
+                        CONFIRA MAIS
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <svg width="1500" height="24" class="separador" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                viewBox="0 0 1500 24">
+                <g>
+                    <path
+                        d="m2.43486,15.87546c37.08695,-0.13237 164.40084,-0.76001 250.0244,-0.89238c85.62358,-0.13237 286.39263,1.19133 327.21317,0c40.82054,-1.19133 -61.47689,-4.04458 -52.01848,-4.97117c9.45842,-0.92659 53.18865,-2.60947 115.7831,-1.2755c62.59445,1.33397 254.56442,11.15336 282.19296,9.96203c27.62854,-1.19133 -72.97712,-10.46924 -54.55810,-11.13109c18.41902,-0.66185 116.41998,-4.35179 166.69895,-3.29284c50.27895,1.05896 93.30045,2.77531 130.88521,3.56953c37.58478,0.79422 82.91925,1.78477 122.49525,1.78477c39.57602,0 110.60059,-2.55114 141.216,-2.81588c30.61541,-0.26473 55.97048,1.03111 65.17999,1.03111"
+                        fill="none" stroke-width="4" stroke-linecap="round" id="svg_1" stroke="#3d4569" />
+                </g>
+            </svg>
+        </section>
+
+        <section id="comoJogar">
+            <h2>COMO JOGAR NA <span>JUST</span> ?</h2>
+
+            <div id="containerPassos">
+                <div class="passos">
+                    <h3>PASSO 1</h3>
+                    <p>
+                        Adquira por meio da <span>Steam</span>, <span>Epic Games</span>
+                        ou <span>Rockstar Launcher</span>, uma cópia original do
+                        <span>Grand Theft Auto (GTA V)</span>.
+                    </p>
+                </div>
+                <div class="passos">
+                    <h3>PASSO 2</h3>
+                    <p>
+                        Faça o <span>download</span> do <span>FiveM</span> por meio
+                        do website oficial da <span>Cfx.re</span>
+                        clicando <a href="https://fivem.net/" target="_blank"><span>aqui</span></a>.
+                    </p>
+                </div>
+                <div class="passos">
+                    <h3>PASSO 3</h3>
+                    <p>
+                        Entre em nosso <span>servidor do discord</span> clicando
+                        <a href="https://discord.gg/cidadejust" target="_blank"><span>aqui</span></a>
+                        e realize os <span>processos seletivos</span> para obter
+                        acesso em nosso servidor e <span>GTA Roleplay</span>. Para
+                        mais <span>informações</span>, asista o vídeo tutorial.
+                    </p>
+                </div>
+                <div class="passos">
+                    <div id="containerTutorial">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 374 374">
+                            <g>
+                                <path
+                                    d="m31.83824,33.25123c29.31325,13.19698 3.47196,302.87047 11.74726,307.38664c8.27529,4.51617 292.41956,-116.35543 298.57618,-139.03031c6.15662,-22.67488 -41.89716,-61.78349 -271.70256,-157.77757"
+                                    fill="none" stroke-width="62" stroke-linecap="round" id="svg_1" />
+                            </g>
+                        </svg>
+                        <iframe src="https://www.youtube.com/embed/79rYopPD2Ls?si=AO5JCoiQMC5uTvJK"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <svg width="1500" height="24" class="separador" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                viewBox="0 0 1500 24">
+                <g>
+                    <path
+                        d="m2.43486,15.87546c37.08695,-0.13237 164.40084,-0.76001 250.0244,-0.89238c85.62358,-0.13237 286.39263,1.19133 327.21317,0c40.82054,-1.19133 -61.47689,-4.04458 -52.01848,-4.97117c9.45842,-0.92659 53.18865,-2.60947 115.7831,-1.2755c62.59445,1.33397 254.56442,11.15336 282.19296,9.96203c27.62854,-1.19133 -72.97712,-10.46924 -54.55810,-11.13109c18.41902,-0.66185 116.41998,-4.35179 166.69895,-3.29284c50.27895,1.05896 93.30045,2.77531 130.88521,3.56953c37.58478,0.79422 82.91925,1.78477 122.49525,1.78477c39.57602,0 110.60059,-2.55114 141.216,-2.81588c30.61541,-0.26473 55.97048,1.03111 65.17999,1.03111"
+                        fill="none" stroke-width="4" stroke-linecap="round" id="svg_1" stroke="#3d4569" />
+                </g>
+            </svg>
+        </section>
+
+        <section id="contato">
+            <form action="" method="post">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns:svgjs="http://svgjs.dev/svgjs" height="3rem" viewBox="0 0 800 400">
+                    <path
+                        d="M131.13772583007812,43.113773345947266C131.45708699544272,57.35728551228841,110.8742519124349,295.2973903401693,137.12574768066406,310.17962646484375C163.37724344889324,325.0618625895182,598.0598575846354,336.71857421875,623.353271484375,322.15570068359375C648.6466853841146,307.5928271484375,637.7564990234375,52.00798380533854,611.3772583007812,37.12574768066406C584.998017578125,22.243511555989585,142.0918096923828,35.00199681599935,128.7425079345703,43.113773345947266C115.39320617675781,51.22554987589518,335.20958618164065,189.47704671223957,361.0778503417969,189.2215576171875C386.9461145019531,188.96606852213543,600.2954150390625,46.371257069905596,613.7724609375,38.3233528137207"
+                        fill="none" stroke-width="35" stroke-linecap="round">
+                    </path>
+                </svg>
+
+                <h2>CONTATE-NOS</h2>
+
+                <div id="divNome">
+                    <label for="nome">SEU NOME:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Nome e Sobrenome" required>
+                </div>
+
+                <div id="divEmail">
+                    <label for="email">SEU EMAIL:</label>
+                    <input type="email" name="email" id="email" placeholder="seuemail123@gmail.com" autocomplete="on"
+                        required>
+                </div>
+
+                <div id="divMensagem">
+                    <label for="mensagem">SUA MENSAGEM:</label>
+                    <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+                </div>
+
+                <button type="submit">ENVIAR</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer-container">
+            <div id="footerSocial">
+                <a href="https://www.instagram.com/cidadejust/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                        <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                            stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                            <g transform="scale(8.53333,8.53333)">
+                                <path
+                                    d="M9.99805,3c-3.859,0 -6.99805,3.14195 -6.99805,7.00195v10c0,3.859 3.14195,6.99805 7.00195,6.99805h10c3.859,0 6.99805,-3.14195 6.99805,-7.00195v-10c0,-3.859 -3.14195,-6.99805 -7.00195,-6.99805zM22,7c0.552,0 1,0.448 1,1c0,0.552 -0.448,1 -1,1c-0.552,0 -1,-0.448 -1,-1c0,-0.552 0.448,-1 1,-1zM15,9c3.309,0 6,2.691 6,6c0,3.309 -2.691,6 -6,6c-3.309,0 -6,-2.691 -6,-6c0,-3.309 2.691,-6 6,-6zM15,11c-2.20914,0 -4,1.79086 -4,4c0,2.20914 1.79086,4 4,4c2.20914,0 4,-1.79086 4,-4c0,-2.20914 -1.79086,-4 -4,-4z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                <a href="https://www.tiktok.com/@cidade.just.rp" target="_blank">
+                    <svg viewBox="0 0 512 512" id="icons" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z">
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <a href="#" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0,0,256,256">
+                        <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                            stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+                            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                            <g transform="scale(10.66667,10.66667)">
+                                <path
+                                    d="M21.582,6.186c-0.23,-0.86 -0.908,-1.538 -1.768,-1.768c-1.56,-0.418 -7.814,-0.418 -7.814,-0.418c0,0 -6.254,0 -7.814,0.418c-0.86,0.23 -1.538,0.908 -1.768,1.768c-0.418,1.56 -0.418,5.814 -0.418,5.814c0,0 0,4.254 0.418,5.814c0.23,0.86 0.908,1.538 1.768,1.768c1.56,0.418 7.814,0.418 7.814,0.418c0,0 6.254,0 7.814,-0.418c0.861,-0.23 1.538,-0.908 1.768,-1.768c0.418,-1.56 0.418,-5.814 0.418,-5.814c0,0 0,-4.254 -0.418,-5.814zM10,14.598v-5.196c0,-0.385 0.417,-0.625 0.75,-0.433l4.5,2.598c0.333,0.192 0.333,0.674 0,0.866l-4.5,2.598c-0.333,0.193 -0.75,-0.048 -0.75,-0.433z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                <a href="https://discord.gg/cidadejust" target="_blank">
+                    <svg viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                        <g>
+                            <path
+                                d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+                                fill-rule="nonzero">
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div id="footerAutoral">
+                <img src="img/logo_just.png" alt="logo">
+                <p id="copyright"><!--JS--></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
