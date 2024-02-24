@@ -22,9 +22,11 @@ html {
     font-size: 62.5%;
 }
 
+/* ----- HEADER -- HEADER -- HEADER ----- */
+
 header {
     background-color: #040715;
-    height: 6.5rem;
+    height: 6rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -39,68 +41,87 @@ header div#container-header {
     padding: 0 1.6rem;
 }
 
-header div#container-header img {
+div#container-header img {
     width: 5rem;
 }
 
-header div#container-header nav#menu {
-    position: relative;
-}
-
-header div#container-header nav#menu div#menu-icon {
+div#menu-trigger {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     row-gap: .8rem;
 }
 
-header div#container-header nav#menu div#menu-icon span {
+div#menu-trigger span {
     display: block;
     width: 3.2rem;
-    height: .3rem;
+    height: .25rem;
     background-color: var(--texto2);
     border-radius: 3.2rem;
 }
 
-header div#container-header nav#menu ul {
+ul#menu-options {
+    width: 100vw;
+    height: 100vh;
     position: absolute;
-    display: none;
+    list-style: none;
+    background-color: #040715;
+    border: .3rem solid var(--borda);
+    transition: .3s;
+    transform: translateX(100%);
+
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 
+ul#menu-options li a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 2rem 0;
+}
+
+
+/* ----- MAIN -- MAIN -- MAIN ----- */
+
 main {
-    margin-top: 6.5rem;
+    margin-top: 6rem;
 }
 
 /* ----- SECTION INÍCIO -- SECTION INÍCIO -- SECTION INÍCIO ----- */
-
-main section#inicio {
-    background-color: #01040C;
-}
 
 main section > div {
     max-width: 128rem;
     margin: 0 auto;
 }
 
-main section#inicio div#container-inicio {
+section#inicio {
+    background-color: #01040C;
+}
+
+div#container-inicio {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main section#inicio div#container-inicio img {
+div#container-inicio > img {
     width: 25rem;
     margin-top: 1.4rem;
 }
 
-main section#inicio div#container-inicio div {
+div#container-inicio > div {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: max-content;
 }
 
-main section#inicio div#container-inicio div p {
+div#container-inicio div p {
     color: var(--texto1);
     font-size: 1.3rem;
     font-weight: 500;
@@ -111,18 +132,18 @@ main section#inicio div#container-inicio div p {
     text-align: center;
 }
 
-main section#inicio div#container-inicio div ul {
+div#container-inicio div ul {
     display: flex;
     column-gap: 4.8rem;
     margin-top: 2.4rem;
 }
 
-main section#inicio div#container-inicio div ul li {
+div#container-inicio div ul li {
     
     list-style: none;
 }
 
-main section#inicio div#container-inicio div ul li a {
+div#container-inicio div ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,13 +154,13 @@ main section#inicio div#container-inicio div ul li a {
     border-radius: .5rem;
 }
 
-main section#inicio div#container-inicio div ul li a svg {
+div#container-inicio div ul li a svg {
     width: 2em;
     height: 2em;
     fill: var(--p1);
 }
 
-main section#inicio div#container-inicio div a#a-contatar {
+a#a-contatar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,17 +178,17 @@ main section#inicio div#container-inicio div a#a-contatar {
 
 /* ----- SECTION QUALIDADES -- SECTION QUALIDADES -- SECTION QUALIDADES ----- */
 
-main section#qualidades {
+section#qualidades {
     background-color: var(--p3);
 }
 
-main section#qualidades div#container-qualidades {
+div#container-qualidades {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main section#qualidades div#container-qualidades h1 {
+div#container-qualidades h1 {
     color: var(--white);
     font-size: 3.3rem;
     align-self: flex-start;
@@ -177,7 +198,7 @@ main section#qualidades div#container-qualidades h1 {
     position: relative;
 }
 
-main section#qualidades div#container-qualidades h1::before {
+div#container-qualidades h1::before {
     content: '';
     display: block;
     width: 3.9rem;
@@ -189,7 +210,7 @@ main section#qualidades div#container-qualidades h1::before {
     bottom: -.3rem;
 }
 
-main section#qualidades div#container-qualidades h1::after {
+div#container-qualidades h1::after {
     content: '';
     display: block;
     width: .5rem;
@@ -202,7 +223,7 @@ main section#qualidades div#container-qualidades h1::after {
     bottom: -.4rem;
 }
 
-main section#qualidades div#container-qualidades div#container-box-qualidades div.box-qualidade {
+div.box-qualidade {
     width: 28rem;
     height: 20.8rem;
     background-color: var(--p2);
@@ -212,22 +233,22 @@ main section#qualidades div#container-qualidades div#container-box-qualidades di
     margin-bottom: 4.2rem;
 }
 
-main section#qualidades div#container-qualidades div#container-box-qualidades div.box-qualidade div {
+div.box-qualidade div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-main section#qualidades div#container-qualidades div#container-box-qualidades div.box-qualidade div h2 {
+div.box-qualidade div h2 {
     color: var(--white);
     font-size: 2.1rem;
 }
 
-main section#qualidades div#container-qualidades div#container-box-qualidades div.box-qualidade div svg {
+div.box-qualidade div svg {
     width: 4.1rem;
 }
 
-main section#qualidades div#container-qualidades div#container-box-qualidades div.box-qualidade h3 {
+div.box-qualidade h3 {
     color: var(--texto1);
     margin-top: 3rem;
     font-weight: 500;
@@ -237,14 +258,14 @@ main section#qualidades div#container-qualidades div#container-box-qualidades di
 
 /* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
 
-main section#projetos {
+section#projetos {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--p2);
 }
 
-main section#projetos div#container-projetos h1 {
+div#container-projetos h1 {
     width: 28rem;
     margin: 2.2rem auto 3.6rem auto;
     font-size: 3.3rem;
@@ -254,7 +275,7 @@ main section#projetos div#container-projetos h1 {
     position: relative;
 }
 
-main section#projetos div#container-projetos h1::before {
+div#container-projetos h1::before {
     content: '';
     display: block;
     width: 3.9rem;
@@ -288,7 +309,7 @@ div.box-projeto {
 }
 
 div.box-projeto h2 {
-    color: var(--white);
+    color: var(--p1);
     font-size: 2.9rem;
 }
 
@@ -300,7 +321,7 @@ div.box-projeto div img {
     margin-top: 1.4rem;
 }
 
-div.box-projeto div div#content-projeto h3 {
+div#content-projeto h3 {
     color: var(--texto1);
     font-size: 1.5rem;
     font-weight: 500;
@@ -308,7 +329,7 @@ div.box-projeto div div#content-projeto h3 {
     margin-top: 1.4rem;
 }
 
-div.box-projeto div div#content-projeto p {
+div#content-projeto p {
     color: var(--white);
     font-size: 1.7rem;
     font-weight: 600;
@@ -316,13 +337,13 @@ div.box-projeto div div#content-projeto p {
     margin-top: 2.6rem;
 }
 
-div.box-projeto div div#content-projeto div {
+div#content-projeto div {
     display: flex;
     flex-wrap: wrap;
     border: .2rem solid var(--borda);
 }
 
-div.box-projeto div div#content-projeto div img {
+div#content-projeto div img {
     width: 3rem;
     height: auto;
 }
