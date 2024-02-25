@@ -305,20 +305,54 @@ div.box-projeto {
     background-color: var(--p3);
     border: .2rem solid var(--borda);
     border-radius: .5rem;
-    padding: 1.9rem;
+    margin-bottom: 1.4rem;
 }
 
 div.box-projeto h2 {
     color: var(--p1);
     font-size: 2.9rem;
+    margin: 1.95rem 1.95rem 0 1.95rem;
 }
 
-div.box-projeto div img {
+div#slide-box {
+    display: flex;
     width: 23.7rem;
     height: 17.2rem;
-    object-fit: cover;
+    margin: 1.4rem 1.95rem 0 1.95rem;
+    overflow: hidden;
     border-radius: 1rem;
-    margin-top: 1.4rem;
+
+    position: relative;
+}
+
+div#slide-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .3s;
+}
+
+div#slide-control {
+    display: flex;
+    gap: 0 2.2rem;
+
+    position: absolute;
+    bottom: .6rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+div#slide-control span.slide-button {
+    display: block;
+    width: 1.6rem;
+    height: 1.1rem;
+    border: .2rem solid var(--white);
+    border-radius: .25rem;
+    transition: .3s;
+}
+
+div#slide-control span.slide-button:first-child {
+    background-color: var(--white);
 }
 
 div#content-projeto h3 {
@@ -326,7 +360,9 @@ div#content-projeto h3 {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 140%;
-    margin-top: 1.4rem;
+    letter-spacing: -.03rem;
+    margin: 1.4rem auto 0 auto;
+    width: 23.7rem;
 }
 
 div#content-projeto p {
@@ -340,10 +376,53 @@ div#content-projeto p {
 div#content-projeto div {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    height: 11.9rem;
+    padding: 1.6rem;
     border: .2rem solid var(--borda);
+    margin: .5rem auto 0 auto;
+    width: 23.7rem;
 }
 
-div#content-projeto div img {
+div#content-projeto div svg {
     width: 3rem;
     height: auto;
+    margin-right: 2.7rem;
+}
+
+div#content-projeto div svg:nth-child(4n) {
+    margin-right: 0;
+}
+
+div#btn-projeto {
+    display: flex;
+    width: 100%;
+    margin-top: 2.3rem;
+}
+
+div#btn-projeto a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 4rem;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-top: .2rem solid var(--borda);
+
+    position: relative;
+}
+
+div#btn-projeto a:nth-child(1)::after {
+    content: '';
+    height: 100%;
+    width: .2rem;
+    background-color: var(--borda);
+
+    position: absolute;
+    top: 0;
+    left: calc(100% + .1rem); /*0.1 é referente a metade da border-top do botão assim ele fica exatamente no meio*/
 }
