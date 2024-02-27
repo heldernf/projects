@@ -46,11 +46,18 @@ main.addEventListener('click', function(){
 });
 
 // ATUALIZA O LINK DO MENU QUE ESTÁ ATIVO
-sections.forEach((section, index) => {
-    section.addEventListener('mouseover', function() {
-        activeOption(index);
+function tst () {
+    sections.forEach((section, index) => {
+        let topo = section.getBoundingClientRect().top;
+        let janela = window.innerHeight;
+    
+        if (topo < janela) {
+            activeOption(index);
+            window.removeEventListener('scroll', tst);
+        }
     });
-});
+}
+window.addEventListener('scroll', tst);
 
 // PASSAR IMAGENS AUTOMATICAMENTE (SLIDEPT1)
 const firstImg = document.querySelectorAll(".first-img-slide");
