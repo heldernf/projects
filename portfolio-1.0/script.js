@@ -1,70 +1,95 @@
-// ABRIR E FECHAR MENU
-const menu = document.getElementById("menu-trigger");
-const options = document.getElementById("menu-options");
-menu.addEventListener('click', function () {
-    if (options.style.transform == "translateX(0%)") {
-        options.style.transform = "translateX(100%)";
+// FUNÇÕES MENU
+const menuIcon = document.getElementById("menu-trigger");
+const optionsBox = document.getElementById("menu-options");
+const options = document.querySelectorAll(".options");
+const main = document.querySelector("main");
+
+// ABRE E FECHA
+function toggleMenu() {
+    if (optionsBox.style.transform == "translateX(0%) scale(1)") {
+        optionsBox.style.transform = "translateX(calc(100% + 1.9rem)) scale(0)";
     } else {
-        options.style.transform = "translateX(0%)";
+        optionsBox.style.transform = "translateX(0%) scale(1)";
+    }
+}
+menuIcon.addEventListener('click', toggleMenu);
+
+// FECHA O MENU QUANDO CLICA EM UMA DAS OPÇÕES DELE
+options.forEach(option => {
+    option.addEventListener('click', toggleMenu);
+});
+
+// FECHA O MENU QUANDO CLICA NO MAIN
+main.addEventListener('click', function(){
+    if (optionsBox.style.transform == "translateX(0%) scale(1)") {
+        toggleMenu();
     }
 });
 
-// PASSAR IMAGENS DO SLIDE CLICANDO
-const imgSlide = document.getElementById("first-img-slide");
-const slideControl = document.querySelectorAll(".slide-button");
-let i = 0;
-slideControl.forEach(button => {
-    button.addEventListener('click', function () {
-        if (button === slideControl[0]) {
-            imgSlide.style.marginLeft = "0%";
-            i = 2;
-            
-            slideControl[0].style.backgroundColor = "white";
-            slideControl[1].style.backgroundColor = "transparent";
-            slideControl[2].style.backgroundColor = "transparent";
-        } else if (button === slideControl[1]) {
-            imgSlide.style.marginLeft = "-100%";
-            i = 3;
-            
-            slideControl[0].style.backgroundColor = "transparent";
-            slideControl[1].style.backgroundColor = "white";
-            slideControl[2].style.backgroundColor = "transparent";
-        } else {
-            imgSlide.style.marginLeft = "-200%";
-            i = 1;
-            
-            slideControl[0].style.backgroundColor = "transparent";
-            slideControl[1].style.backgroundColor = "transparent";
-            slideControl[2].style.backgroundColor = "white";
-        }
-    })
-})
+// PASSAR IMAGENS AUTOMATICAMENTE (SLIDEPT1)
+const firstImg = document.querySelectorAll(".first-img-slide");
+const btnSlide = document.querySelectorAll(".slide-button");
+const totalImg = 12;
+let pSlide = 1;
 
-// PASSAR IMAGENS AUTOMATICAMENTE
-setInterval(function () {
-    switch (i) {
+function activeBackground() {
+    for (let i = 0; i < totalImg; i++) {
+        btnSlide[i].style.backgroundColor = "transparent";
+    }
+
+    if (pSlide == 0) {
+        btnSlide[0].style.backgroundColor = "white"
+        btnSlide[3].style.backgroundColor = "white"
+        btnSlide[6].style.backgroundColor = "white"
+        btnSlide[9].style.backgroundColor = "white"
+    } else if (pSlide == 1) {
+        btnSlide[1].style.backgroundColor = "white"
+        btnSlide[4].style.backgroundColor = "white"
+        btnSlide[7].style.backgroundColor = "white"
+        btnSlide[10].style.backgroundColor = "white"
+    } else if (pSlide == 2) {
+        btnSlide[2].style.backgroundColor = "white"
+        btnSlide[5].style.backgroundColor = "white"
+        btnSlide[8].style.backgroundColor = "white"
+        btnSlide[11].style.backgroundColor = "white"
+    }
+}
+
+function moveSlide() {
+    switch (pSlide) {
+        case 0:
+            firstImg.forEach(img => {
+                img.style.marginLeft = "0%";
+            })
+            activeBackground();
+            pSlide++;
+            break;
         case 1:
-            imgSlide.style.marginLeft = "-0%";
-            slideControl[2].style.backgroundColor = "transparent";
-            slideControl[0].style.backgroundColor = "white";
-            i++;
+            firstImg.forEach(img => {
+                img.style.marginLeft = "-100%";
+            })
+            activeBackground();
+            pSlide++;
             break;
         case 2:
-            imgSlide.style.marginLeft = "-100%";
-            slideControl[0].style.backgroundColor = "transparent";
-            slideControl[1].style.backgroundColor = "white";
-            i++;
+            firstImg.forEach(img => {
+                img.style.marginLeft = "-200%";
+            })
+            activeBackground();
+            pSlide = 0;
             break;
-        case 3:
-            imgSlide.style.marginLeft = "-200%";
-            slideControl[1].style.backgroundColor = "transparent";
-            slideControl[2].style.backgroundColor = "white";
-            i = 1;
-            break;
-        default:
-            imgSlide.style.marginLeft = "-100%";
-            slideControl[0].style.backgroundColor = "transparent";
-            slideControl[1].style.backgroundColor = "white";
-            i = 3;
     }
+}
+
+setInterval(function () {
+    moveSlide();
 }, 3000)
+
+// PASSAR IMAGENS DO SLIDE CLeICANDO (SLIDE PT2)
+btnSlide.forEach((button, index) => {
+    button.addEventListener('click', function () {
+        pSlide = index % 3;
+        moveSlide();
+        console.log(index, pSlide)
+    });
+});
