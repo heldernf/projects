@@ -1,29 +1,55 @@
-// FUNÇÕES MENU
 const menuIcon = document.getElementById("menu-trigger");
 const optionsBox = document.getElementById("menu-options");
 const options = document.querySelectorAll(".options");
 const main = document.querySelector("main");
+const active = document.getElementById("active");
+const sections = document.querySelectorAll("section");
 
 // ABRE E FECHA
 function toggleMenu() {
-    if (optionsBox.style.transform == "translateX(0%) scale(1)") {
-        optionsBox.style.transform = "translateX(calc(100% + 1.9rem)) scale(0)";
+    if (optionsBox.classList.contains('invisible')) {
+        optionsBox.classList.remove('invisible');
+        optionsBox.classList.add('visible');
+
+        menuIcon.classList.add('animeMenu')
     } else {
-        optionsBox.style.transform = "translateX(0%) scale(1)";
+        optionsBox.classList.remove('visible');
+        optionsBox.classList.add('invisible');
+        
+        menuIcon.classList.remove('animeMenu')
     }
 }
 menuIcon.addEventListener('click', toggleMenu);
 
+// ADD UM ID ESTILIZADO COM UMA ANIMAÇÃO NO CSS PARA AS OPÇÕES DO MENU
+function activeOption(index) {
+    options.forEach(option => {
+        option.removeAttribute('id');
+    });
+
+    options[index].id = 'active';
+}
+
 // FECHA O MENU QUANDO CLICA EM UMA DAS OPÇÕES DELE
-options.forEach(option => {
-    option.addEventListener('click', toggleMenu);
+options.forEach((option, index) => {
+    option.addEventListener('click', function() {
+        toggleMenu();
+        activeOption(index);
+    });
 });
 
 // FECHA O MENU QUANDO CLICA NO MAIN
 main.addEventListener('click', function(){
-    if (optionsBox.style.transform == "translateX(0%) scale(1)") {
+    if (optionsBox.classList.contains('visible')) {
         toggleMenu();
     }
+});
+
+// ATUALIZA O LINK DO MENU QUE ESTÁ ATIVO
+sections.forEach((section, index) => {
+    section.addEventListener('mouseover', function() {
+        activeOption(index);
+    });
 });
 
 // PASSAR IMAGENS AUTOMATICAMENTE (SLIDEPT1)

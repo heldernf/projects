@@ -48,17 +48,17 @@ header div#container-header {
 }
 
 div#container-header img {
-    width: 5rem;
+    width: 3.5rem;
 }
 
 div#menu-trigger {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: .8rem;
-    height: 4rem;
+    flex-direction: column;
+
     width: 4rem;
+    height: 4rem;
     cursor: pointer;
 }
 
@@ -68,29 +68,91 @@ div#menu-trigger span {
     height: .2rem;
     background-color: var(--p1);
     border-radius: 3.2rem;
+    margin: .4rem 0;
+    transition: .3s;
 }
 
+div.animeMenu > span:nth-child(1) {
+    transform-origin: center;
+    margin: 0 0 !important;
+    transform: translateY(.1rem) rotate(225deg);
+} /*JS --- JS*/
+
+div.animeMenu > span:nth-child(2) {
+    margin: 0 0 !important;
+    transform: translateY(-.1rem) rotate(-225deg);
+    transform-origin: center;
+} /*JS --- JS*/
+
 ul#menu-options {
+    width: 90%;
+    display: flex;
     list-style: none;
     background-color: #040715;
-    transition: .3s;
-    margin-right: 1.9rem;
-    transform: translateX(calc(100% + 1.9rem)) scale(0); /*calc(100% + margin-right)*/
-
+    transition: .4s ease-in-out;
+    border: .2rem solid var(--borda);
+    border-radius: .8rem;
+    
     position: absolute;
-    top: 100%;
-    right: 0%;
-    border-radius: 0 0 .8rem .8rem;
+    top: calc(100% + 1rem);
+}
+
+ul.visible {
+    left: 50%;
+    transform: translateX(-50%);
+} /*JS --- JS*/
+ul.invisible {
+    left: 100%;
+} /*JS --- JS*/
+
+ul#menu-options li {
+    width: calc(100% / 4);
 }
 
 ul#menu-options li a {
     display: block;
+    padding: 1.6rem 0;
     color: var(--white);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     text-align: center;
-    padding: 2.5rem 4rem;
-    font-weight: 600;
+    font-weight: 500;
+    transition: .3s;
+
+    position: relative;
+}
+
+ul#menu-options li a#active {
+    font-weight: 700;
+    overflow: hidden;
+} /*JS --- JS*/
+
+ul#menu-options li a#active::after {
+    content: '';
+    display: block;
+    height: .15rem;
+    width: 3.7rem;
+    background-image: linear-gradient(90deg, transparent 1%, var(--p1));
+
+    position: absolute;
+    top: 70%;
+    animation: animeActive 1s ease-in-out infinite;
+} /*JS --- JS*/
+
+@keyframes animeActive {
+    0% {
+        width: 0;
+        left: 0;
+    }
+
+    50% {
+        width: 4.5rem;
+    }
+
+    100% {
+        width: .5rem;
+        left: 100%;
+    }
 }
 
 /* ----- MAIN -- MAIN -- MAIN ----- */
