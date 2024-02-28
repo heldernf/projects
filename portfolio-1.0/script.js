@@ -46,18 +46,22 @@ main.addEventListener('click', function(){
 });
 
 // ATUALIZA O LINK DO MENU QUE ESTÁ ATIVO
-function tst () {
-    sections.forEach((section, index) => {
-        let topo = section.getBoundingClientRect().top;
-        let janela = window.innerHeight;
-    
-        if (topo < janela) {
-            activeOption(index);
-            window.removeEventListener('scroll', tst);
-        }
-    });
+let timeout;
+
+function attOption () {  
+    clearTimeout(timeout);
+    timeout = setTimeout(function() { 
+        sections.forEach((section, index) => {
+            let topo = section.getBoundingClientRect().top;
+            let janela = window.innerHeight;
+        
+            if (topo < janela - 450) {
+                activeOption(index);
+            }
+        });
+    }, 200);
 }
-window.addEventListener('scroll', tst);
+window.addEventListener('scroll', attOption);
 
 // PASSAR IMAGENS AUTOMATICAMENTE (SLIDEPT1)
 const firstImg = document.querySelectorAll(".first-img-slide");
