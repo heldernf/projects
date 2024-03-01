@@ -1,11 +1,19 @@
 @media (min-width: 428px) {
+    header {
+        height: 6rem;
+    }
+
+    main {
+        margin-top: 6rem;
+    }
+
     div#container-inicio img {
-        width: 31rem;
+        width: 30rem;
     }
 
     div#box-about p {
-        font-size: 1.5rem;
-        width: 32rem;
+        font-size: 1.45rem;
+        width: 30rem;
     }
 
     div#box-about ul li a {
@@ -21,7 +29,6 @@
     /* ----- SECTION QUALIDADES -- SECTION QUALIDADES -- SECTION QUALIDADES ----- */
 
     div#container-qualidades h1 {
-        width: 33rem;
         font-size: 3.5rem;
     }
 
@@ -34,7 +41,7 @@
         font-size: 2.4rem;
     }
 
-    div.box-qualidade div svg  {
+    div.box-qualidade div svg {
         height: 3.9rem;
     }
 
@@ -44,5 +51,220 @@
 
     /* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
 
-    
+    div#container-projetos h1 {
+        font-size: 3.5rem;
+    }
+
+    div.box-projeto {
+        width: 33rem;
+    }
+
+    div.box-projeto h2 {
+        font-size: 3rem;
+    }
+
+    div#slide-box {
+        width: 28.7rem;
+        height: 19.2rem;
+    }
+
+    div#content-projeto h3 {
+        width: 28.7rem;
+    }
+
+    div#btn-projeto a {
+        height: 5rem;
+        font-size: 1.1rem;
+    }
+
+    /* ----- SECTION FORM -- SECTION FORM -- SECTION FORM ----- */
+
+    section#contato form {
+        width: 33rem;
+        padding: 5rem 3rem 4rem 3rem;
+    }
+
+    form>svg {
+        height: 4.3rem;
+    }
+
+    div.box-input label {
+        font-size: 1.2rem;
+    }
+
+    form button {
+        height: 4rem;
+        width: 10rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 600px) {
+    div#container-inicio {
+        flex-direction: row;
+        justify-content: center;
+        padding: 3rem 0;
+        column-gap: 3rem;
+    }
+
+    div#container-inicio>img {
+        width: 28rem;
+        margin-top: 0;
+    }
+
+    div#box-about p {
+        width: 26rem;
+        font-size: 1.2rem;
+        margin-top: 0;
+        text-align: start;
+    }
+
+    div#box-about ul {
+        margin-top: 3rem;
+    }
+
+    div#box-about ul li a {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    div#box-about a#a-contatar {
+        width: 23.4rem;
+        margin: 2.5rem 0 0 0;
+    }
+
+    /* ----- SECTION QUALIDADES -- SECTION QUALIDADES -- SECTION QUALIDADES ----- */
+
+    div#container-qualidades h1 {
+        width: 90%;
+        font-size: 3rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    div#container-box-qualidades {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "q1 q2"
+            "q3 q3";
+        width: 53rem;
+        gap: 1.2rem 1.2rem;
+        margin-bottom: 3rem;
+    }
+
+    div.box-qualidade {
+        width: 100%;
+        margin-bottom: 0;
+        height: 22rem;
+    }
+
+    div.box-qualidade:nth-child(1) {
+        grid-area: q1;
+    }
+
+    div.box-qualidade:nth-child(2) {
+        grid-area: q2;
+    }
+
+    div.box-qualidade:nth-child(3) {
+        grid-area: q3;
+        height: 18rem;
+    }
+
+    div.box-qualidade div h2 {
+        font-size: 2rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+    }
+
+    div.box-qualidade div svg {
+        height: 3.3rem;
+    }
+
+    div.box-qualidade h3 {
+        font-size: 1.3rem;
+    }
+
+    /* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
+
+    div#container-projetos h1 {
+        font-size: 3rem;
+    }
+
+    div.box-projeto {
+        width: 53rem;
+    }
+
+    div#repart {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "p1 p2"
+            "p3 p3"
+        ;
+        margin-top: 2rem;
+    }
+
+    div#container-slide {
+        grid-area: p1;
+    }
+
+    div#slide-box {
+        margin: 0;
+        height: 100%;
+        width: 85%;
+        margin-left: 2rem;
+    }
+
+    div#content-projeto {
+        margin-right: 2rem;
+        grid-area: p2;
+    }
+
+    div#content-projeto h3 {
+        margin: 0;
+        width: 23.7rem;
+        font-size: 1.4rem;
+    }
+
+    div#content-projeto p {
+        font-size: 1.6rem;
+    }
+
+    div#content-projeto div {
+        margin: 0;
+        margin-top: .5rem;
+    }
+
+    div#btn-projeto {
+        margin-top: 2rem;
+        grid-area: p3;
+    }
+
+    div#btn-projeto a {
+        font-size: 1.15rem;
+    }
+
+    /* ----- SECTION FORM -- SECTION FORM -- SECTION FORM ----- */
+
+    section#contato form {
+        width: 53rem;
+    }
+
+    form > svg {
+        height: 4.5rem;
+    }
+
+    div#container-input {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    div.box-input {
+        width: 100%;
+    }
 }

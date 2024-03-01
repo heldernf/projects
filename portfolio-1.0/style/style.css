@@ -23,6 +23,16 @@ html {
     scroll-behavior: smooth;
 }
 
+html::-webkit-scrollbar {
+    width: .5rem;
+    background-color: var(--borda);
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--p1);
+    border-radius: 3rem;
+}
+
 body {
     background-color: var(--borda);
 }
@@ -47,8 +57,10 @@ header div#container-header {
     position: relative;
 }
 
-div#container-header img {
-    width: 3.5rem;
+div#container-header a svg {
+    display: block;
+    width: 3rem;
+    fill: var(--p1);
 }
 
 div#menu-trigger {
@@ -249,6 +261,8 @@ div#box-about a#a-contatar {
 
 section#qualidades {
     background-color: var(--p3);
+    display: flex;
+    flex-direction: column;
 }
 
 div#container-qualidades {
@@ -261,7 +275,7 @@ div#container-qualidades h1 {
     color: var(--white);
     font-size: 3.3rem;
     align-self: flex-start;
-    width: 28rem;
+    width: 100%;
     margin: 2.2rem auto 3.6rem auto;
 
     position: relative;
@@ -337,7 +351,7 @@ section#projetos {
 }
 
 div#container-projetos h1 {
-    width: 28rem;
+    width: 100%;
     margin: 2.2rem auto 3.6rem auto;
     font-size: 3.3rem;
     color: var(--white);
@@ -517,12 +531,13 @@ section#contato form {
     margin: 4.5rem auto 4rem auto;
     border-radius: .5rem;
     border: .2rem solid var(--borda);
-    padding: 4rem 1.4rem;
+    padding: 4rem 2rem;
     
     position: relative;
 }
 
 form > svg {
+    height: 4rem;
     position: absolute;
     bottom: 100%;
     left: 50%;
@@ -589,6 +604,7 @@ div#container-mensagem textarea {
     font-size: 1.1rem;
     font-weight: 500;
     outline: none;
+    margin-top: .5rem;
 }
 
 form button {
