@@ -5,18 +5,29 @@ const main = document.querySelector("main");
 const active = document.getElementById("active");
 const sections = document.querySelectorAll("section");
 
+// NÃO DEIXA O MENU BUGAR SE ELE ESTIVER ABERTO E OCORRER UM resize para 600px e vice e verso
+window.addEventListener('resize', function () {
+    if (window.innerWidth == 600) {
+        menuIcon.classList.remove('animeMenu')
+        optionsBox.classList.remove('visible')
+        optionsBox.classList.add('invisible')
+    }
+});
+
 // ABRE E FECHA
 function toggleMenu() {
-    if (optionsBox.classList.contains('invisible')) {
-        optionsBox.classList.remove('invisible');
-        optionsBox.classList.add('visible');
+    if (window.innerWidth < 600) {
+        if (optionsBox.classList.contains('invisible')) {
+            optionsBox.classList.remove('invisible');
+            optionsBox.classList.add('visible');
 
-        menuIcon.classList.add('animeMenu')
-    } else {
-        optionsBox.classList.remove('visible');
-        optionsBox.classList.add('invisible');
-        
-        menuIcon.classList.remove('animeMenu')
+            menuIcon.classList.add('animeMenu')
+        } else {
+            optionsBox.classList.remove('visible');
+            optionsBox.classList.add('invisible');
+
+            menuIcon.classList.remove('animeMenu')
+        }
     }
 }
 menuIcon.addEventListener('click', toggleMenu);
@@ -32,14 +43,14 @@ function activeOption(index) {
 
 // FECHA O MENU QUANDO CLICA EM UMA DAS OPÇÕES DELE
 options.forEach((option, index) => {
-    option.addEventListener('click', function() {
+    option.addEventListener('click', function () {
         toggleMenu();
         activeOption(index);
     });
 });
 
 // FECHA O MENU QUANDO CLICA NO MAIN
-main.addEventListener('click', function(){
+main.addEventListener('click', function () {
     if (optionsBox.classList.contains('visible')) {
         toggleMenu();
     }
@@ -48,13 +59,13 @@ main.addEventListener('click', function(){
 // ATUALIZA O LINK DO MENU QUE ESTÁ ATIVO
 let timeout;
 
-function attOption () {  
+function attOption() {
     clearTimeout(timeout);
-    timeout = setTimeout(function() { 
+    timeout = setTimeout(function () {
         sections.forEach((section, index) => {
             let topo = section.getBoundingClientRect().top;
             let janela = window.innerHeight;
-        
+
             if (topo < janela - 450) {
                 activeOption(index);
             }

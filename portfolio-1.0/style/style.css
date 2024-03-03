@@ -118,7 +118,7 @@ ul.invisible {
 } /*JS --- JS*/
 
 ul#menu-options li {
-    width: calc(100% / 4);
+    width: 100%;
 }
 
 ul#menu-options li a {
@@ -625,3 +625,33 @@ form button {
 }
 
 /* ----- FOOTER -- FOOTER -- FOOTER ----- */
+
+footer {
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem 0;
+}
+
+div#container-social {
+    display: flex;
+    gap: 0 3.5rem;
+    width: max-content;
+}
+
+div#container-social a svg {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: var(--texto2);
+    transition: .3s;
+}
+
+footer p {
+    color: var(--texto2);
+    font-size: 1rem;
+    font-weight: 700;
+    width: max-content;
+}
