@@ -195,7 +195,7 @@
             "q1 q2"
             "q3 q3";
         width: 53rem;
-        gap: 1.2rem 1.2rem;
+        gap: 1.2rem;
         margin-bottom: 3rem;
     }
 
@@ -331,5 +331,84 @@
 }
 
 @media (min-width: 768px) {
+    /* ----- HEADER -- HEADER -- HEADER ----- */
+
+    header div#container-header {
+        padding: 0 2.5rem;
+    }
+
+    div#container-header a svg {
+        width: 3.2rem;
+    }
+
+    ul#menu-options {
+        gap: 0 2.5rem;
+    }
+
+    ul#menu-options li a {
+        font-size: 1.2rem;
+    }
+
+    ul#menu-options li a#active::after {
+        top: 82%;
+    }
+
+    /* ----- SECTION INÍCIO -- SECTION INÍCIO -- SECTION INÍCIO ----- */
+
+    div#container-inicio {
+        column-gap: 5rem;
+    }
+
+    div#container-inicio>img {
+        width: 34rem;
+    }
+
+    div#box-about p {
+        width: 32.5rem;
+        font-size: 1.35rem;
+    }
+
+    div#box-about ul li a {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    div#box-about a#a-contatar {
+        width: 25.6rem;
+    }
+
+    /* ----- SECTION QUALIDADES -- SECTION QUALIDADES -- SECTION QUALIDADES ----- */
+
+    div#container-qualidades h1 {
+        font-size: 2.9rem;
+        margin: 2.5rem auto;
+        width: max-content;
+    }
+
+    div#container-box-qualidades {
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem 0;
+    }
     
+    div.box-qualidade {
+        width: 70rem;
+        height: 18rem;
+    }
+    
+    div.box-qualidade div h2 {
+        font-size: 1.9rem;
+    }
+
+    div.box-qualidade div svg {
+        height: 3.15rem;
+    }
+
+    div.box-qualidade h3 {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+    }
+
+    /* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
 }
