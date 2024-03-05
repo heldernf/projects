@@ -9,11 +9,17 @@
 
     div#container-inicio img {
         width: 30rem;
+        margin-top: 3rem;
     }
 
     div#box-about p {
         font-size: 1.45rem;
         width: 30rem;
+        margin-top: 2.5rem;
+    }
+
+    div#box-about ul {
+        margin-top: 3rem;
     }
 
     div#box-about ul li a {
@@ -24,12 +30,16 @@
     div#box-about a#a-contatar {
         width: 25.6rem;
         height: 4.4rem;
+        margin-top: 2.5rem;
+        margin-bottom: 3.5rem;
     }
 
     /* ----- SECTION QUALIDADES -- SECTION QUALIDADES -- SECTION QUALIDADES ----- */
 
     div#container-qualidades h1 {
         font-size: 3.5rem;
+        margin-top: 3rem;
+        margin-bottom: 3.5rem;
     }
 
     div.box-qualidade {
@@ -53,6 +63,12 @@
 
     div#container-projetos h1 {
         font-size: 3.5rem;
+        margin-top: 3rem;
+        margin-bottom: 3.5rem;
+    }
+
+    div#container-box-projetos {
+        row-gap: 4rem;
     }
 
     div.box-projeto {
@@ -61,15 +77,20 @@
 
     div.box-projeto h2 {
         font-size: 3rem;
+        width: 86%;
+    }
+
+    div.box-projeto h2::after {
+        left: 44%;
     }
 
     div#slide-box {
-        width: 28.7rem;
+        width: 86%;
         height: 19.2rem;
     }
 
     div#content-projeto h3 {
-        width: 28.7rem;
+        width: 86%;
     }
 
     div#btn-projeto a {
@@ -84,7 +105,14 @@
         padding: 5rem 3rem 4rem 3rem;
     }
 
-    form>svg {
+    section#contato form {
+        margin-top: 5rem;
+        margin-bottom: 5.5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    section#contato form>svg {
         height: 4.3rem;
     }
 
@@ -92,7 +120,7 @@
         font-size: 1.2rem;
     }
 
-    form button {
+    section#contato form button {
         height: 4rem;
         width: 10rem;
         font-size: 1.25rem;
@@ -149,7 +177,7 @@
     div#container-inicio {
         flex-direction: row;
         justify-content: center;
-        padding: 3rem 0;
+        padding: 4rem 0;
         column-gap: 3rem;
     }
 
@@ -182,10 +210,8 @@
     /* ----- SECTION QUALIDADES -- SECTION QUALIDADES -- SECTION QUALIDADES ----- */
 
     div#container-qualidades h1 {
-        width: 90%;
-        font-size: 3rem;
-        margin-left: 0;
-        margin-right: 0;
+        width: max-content;
+        font-size: 2.9rem;
     }
 
     div#container-box-qualidades {
@@ -235,12 +261,28 @@
 
     /* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
 
+    section#projetos {
+        padding-bottom: 5rem;
+    }
+
     div#container-projetos h1 {
-        font-size: 3rem;
+        width: max-content;
+        font-size: 2.9rem;
     }
 
     div.box-projeto {
-        width: 53rem;
+        width: 54rem;
+    }
+
+    div.box-projeto h2 {
+        font-size: 2.7rem;
+        width: max-content;
+        margin-left: 1.6rem;
+        margin-right: 0;
+    }
+
+    div.box-projeto h2::after {
+        left: 98%;
     }
 
     div#repart {
@@ -251,22 +293,23 @@
             "p3 p3"
         ;
         margin-top: 2rem;
+        justify-items: center;
     }
 
     div#container-slide {
         grid-area: p1;
+        width: 23.7rem;
     }
 
     div#slide-box {
         margin: 0;
         height: 100%;
-        width: 85%;
-        margin-left: 2rem;
+        width: 100%;
     }
 
     div#content-projeto {
-        margin-right: 2rem;
         grid-area: p2;
+        width: max-content;
     }
 
     div#content-projeto h3 {
@@ -297,9 +340,11 @@
 
     section#contato form {
         width: 53rem;
+        margin-top: 5.5rem;
+        margin-bottom: 6rem;
     }
 
-    form>svg {
+    section#contato form>svg {
         height: 4.5rem;
     }
 
@@ -312,6 +357,10 @@
 
     div.box-input {
         width: 100%;
+    }
+
+    section#contato form button {
+        height: 4.5rem;
     }
 
     /* ----- FOOTER -- FOOTER -- FOOTER ----- */
@@ -411,4 +460,6 @@
     }
 
     /* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
+
+
 }
