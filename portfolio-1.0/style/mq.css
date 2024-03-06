@@ -220,7 +220,7 @@
         grid-template-areas:
             "q1 q2"
             "q3 q3";
-        width: 53rem;
+        width: 54rem;
         gap: 1.2rem;
         margin-bottom: 3rem;
     }
@@ -339,7 +339,7 @@
     /* ----- SECTION FORM -- SECTION FORM -- SECTION FORM ----- */
 
     section#contato form {
-        width: 53rem;
+        width: 54rem;
         margin-top: 5.5rem;
         margin-bottom: 6rem;
     }
@@ -406,6 +406,7 @@
 
     div#container-inicio {
         column-gap: 5rem;
+        padding: 6rem 0;
     }
 
     div#container-inicio>img {
@@ -413,8 +414,14 @@
     }
 
     div#box-about p {
-        width: 32.5rem;
+        width: 33rem;
         font-size: 1.35rem;
+        letter-spacing: 0;
+    }
+
+    div#box-about ul {
+        margin-top: 6rem;
+        column-gap: 5.5rem;
     }
 
     div#box-about ul li a {
@@ -423,22 +430,23 @@
     }
 
     div#box-about a#a-contatar {
-        width: 25.6rem;
+        width: 26.5rem;
+        margin-top: 3.5rem;
     }
 
     /* ----- SECTION QUALIDADES -- SECTION QUALIDADES -- SECTION QUALIDADES ----- */
 
     div#container-qualidades h1 {
-        font-size: 2.9rem;
-        margin: 2.5rem auto;
-        width: max-content;
+        font-size: 3rem;
+        margin: 4.5rem auto 3.5rem auto;
     }
 
     div#container-box-qualidades {
         width: max-content;
         display: flex;
         flex-direction: column;
-        gap: 2rem 0;
+        gap: 2.5rem 0;
+        margin-bottom: 6rem;
     }
     
     div.box-qualidade {
@@ -461,5 +469,5 @@
 
     /* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
 
-
+    
 }

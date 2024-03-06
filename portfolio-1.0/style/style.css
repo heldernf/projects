@@ -283,7 +283,7 @@ div#container-qualidades h1 {
 div#container-qualidades h1::before {
     content: '';
     display: block;
-    width: 3.9rem;
+    width: 3.7rem;
     height: .2rem;
     background-color: var(--p1);
 
@@ -301,8 +301,8 @@ div#container-qualidades h1::after {
     background-color: var(--p1);
 
     position: absolute;
-    left: 4.3rem;
-    bottom: -.4rem;
+    left: 4.1rem;
+    bottom: -.45rem;
 }
 
 div.box-qualidade {
@@ -361,7 +361,7 @@ div#container-projetos h1 {
 div#container-projetos h1::before {
     content: '';
     display: block;
-    width: 3.9rem;
+    width: 3.7rem;
     height: .2rem;
     background-color: var(--p1);
 
@@ -379,8 +379,8 @@ div#container-projetos h1::after {
     background-color: var(--p1);
 
     position: absolute;
-    left: 4.3rem;
-    bottom: -.4rem;
+    left: 4.1rem;
+    bottom: -.45rem;
 }
 
 div#container-box-projetos {
