@@ -553,7 +553,7 @@ section#contato form > svg {
     position: absolute;
     bottom: 100%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%) rotate(-3deg);
 }
 
 div#container-input {
@@ -586,7 +586,7 @@ div.box-input input {
     display: block;
     font-size: 1.1rem;
     font-weight: 500;
-    color: var(--white);
+    color: var(--texto2);
     background-color: transparent;
     border: none;
     outline: none;
@@ -611,7 +611,7 @@ div#container-mensagem textarea {
     border: .2rem solid var(--borda);
     background-color: var(--p3);
     resize: none;
-    color: var(--white);
+    color: var(--texto2);
     padding: 1rem;
     font-size: 1.1rem;
     font-weight: 500;
