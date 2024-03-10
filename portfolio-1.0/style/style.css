@@ -15,7 +15,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Archivo", sans-serif;    
+    font-family: "Archivo", sans-serif;
+}
+
+*:focus-visible {
+    outline: .15rem dashed var(--p1);
 }
 
 html {
@@ -84,17 +88,19 @@ div#menu-trigger span {
     transition: .3s;
 }
 
-div.animeMenu > span:nth-child(1) {
+/*JS --- JS*/
+div.animeMenu>span:nth-child(1) {
     transform-origin: center;
     margin: 0 0 !important;
     transform: translateY(.1rem) rotate(225deg);
-} /*JS --- JS*/
+}
 
-div.animeMenu > span:nth-child(2) {
+/*JS --- JS*/
+div.animeMenu>span:nth-child(2) {
     margin: 0 0 !important;
     transform: translateY(-.1rem) rotate(-225deg);
     transform-origin: center;
-} /*JS --- JS*/
+}
 
 ul#menu-options {
     width: 90%;
@@ -104,18 +110,21 @@ ul#menu-options {
     transition: .4s ease-in-out;
     border: .2rem solid var(--borda);
     border-radius: .8rem;
-    
+
     position: absolute;
     top: calc(100% + 1rem);
 }
 
+/*JS --- JS*/
 ul.visible {
     left: 50%;
     transform: translateX(-50%);
-} /*JS --- JS*/
+}
+
+/*JS --- JS*/
 ul.invisible {
     left: 100%;
-} /*JS --- JS*/
+}
 
 ul#menu-options li {
     width: 100%;
@@ -128,17 +137,19 @@ ul#menu-options li a {
     text-decoration: none;
     font-size: 1.05rem;
     text-align: center;
-    font-weight: 500;
-    transition: .3s;
+    font-weight: 600;
+    transition: font-weight .3s;
 
     position: relative;
 }
 
+/*JS --- JS*/
 ul#menu-options li a#active {
     font-weight: 700;
     overflow: hidden;
-} /*JS --- JS*/
+}
 
+/*JS --- JS*/
 ul#menu-options li a#active::after {
     content: '';
     display: block;
@@ -149,7 +160,7 @@ ul#menu-options li a#active::after {
     position: absolute;
     top: 70%;
     animation: animeActive 1s ease-in-out infinite;
-} /*JS --- JS*/
+}
 
 @keyframes animeActive {
     0% {
@@ -175,7 +186,7 @@ main {
 
 /* ----- SECTION INÍCIO -- SECTION INÍCIO -- SECTION INÍCIO ----- */
 
-main section > div {
+main section>div {
     max-width: 128rem;
     margin: 0 auto;
 }
@@ -190,7 +201,7 @@ div#container-inicio {
     align-items: center;
 }
 
-div#container-inicio > img {
+div#container-inicio>img {
     width: 25rem;
     margin-top: 2rem;
 }
@@ -232,6 +243,12 @@ div#box-about ul li a {
     background-color: var(--p3);
     border: .2rem solid var(--borda);
     border-radius: .5rem;
+    transition: box-shadow, transform .3s;
+}
+
+div#box-about ul li a:hover {
+    box-shadow: 0 0 1.5rem #070A1A;
+    transform: scale(1.075);
 }
 
 div#box-about ul li a svg {
@@ -254,6 +271,12 @@ div#box-about a#a-contatar {
     background-color: var(--p2);
     border: .2rem solid var(--borda);
     border-radius: .5rem;
+    letter-spacing: .2rem;
+    transition: letter-spacing .3s;
+}
+
+div#box-about a#a-contatar:hover {
+    letter-spacing: .5rem;
 }
 
 /* ----- SECTION QUALIDADES -- SECTION QUALIDADES -- SECTION QUALIDADES ----- */
@@ -313,6 +336,12 @@ div.box-qualidade {
     border: .2rem solid var(--borda);
     padding: 2rem;
     margin-bottom: 4.2rem;
+    transition: border .9s;
+    cursor: pointer;
+}
+
+div.box-qualidade:hover {
+    border: .2rem solid var(--p1);
 }
 
 div.box-qualidade div {
@@ -330,11 +359,15 @@ div.box-qualidade div svg {
     height: 3.6rem;
 }
 
+div.box-qualidade div svg stop {
+    stop-color: var(--p1);
+}
+
 div.box-qualidade h3 {
     color: var(--texto1);
     margin-top: 3rem;
     font-weight: 500;
-    line-height: 140%;  
+    line-height: 140%;
     font-size: 1.25rem;
     letter-spacing: -.03rem;
 }
@@ -399,20 +432,26 @@ div.box-projeto {
 div.box-projeto h2 {
     color: var(--p1);
     font-size: 2.9rem;
-    margin: 1.95rem auto 0 auto;
-    width: 85.87%;
+    margin: 1.95rem auto 0 1.95rem;
+    width: max-content;
 
     position: relative;
 }
 
-div.box-projeto h2::after {
-    content: url("../img/blocos-project.svg");
+div.box-projeto h2 svg {
+    content: '';
     display: block;
     width: 1.7rem;
-    height: 1.9rem;
+    height: 1.8rem;
     position: absolute;
     bottom: 75%;
-    left: 50%;
+    left: 100%;
+}
+
+div.box-projeto h2 svg rect {
+    fill: var(--p1);
+    width: .8rem;
+    height: .8rem;
 }
 
 div#slide-box {
@@ -449,7 +488,7 @@ div#slide-control span.slide-button {
     height: 1.1rem;
     border: .2rem solid var(--white);
     border-radius: .25rem;
-    transition: .3s;
+    transition: background-color .3s;
     cursor: pointer;
 }
 
@@ -465,6 +504,15 @@ div#content-projeto h3 {
     letter-spacing: -.03rem;
     margin: 1.4rem auto 0 auto;
     width: 85.87%;
+    background-image: linear-gradient(to right, transparent, var(--p1), transparent);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 0% .1rem;
+    transition: background-size .3s;
+}
+
+div#content-projeto h3:hover {
+    background-size: 100% .1rem;
 }
 
 div#content-projeto p {
@@ -476,10 +524,10 @@ div#content-projeto p {
 }
 
 div#content-projeto div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 2.7rem;
     height: 11.9rem;
     padding: 1.6rem;
     border: .2rem solid var(--borda);
@@ -490,11 +538,20 @@ div#content-projeto div {
 div#content-projeto div svg {
     width: 3rem;
     height: auto;
-    margin-right: 2.7rem;
+    transition: transform .3s;
+    cursor: pointer;
 }
 
-div#content-projeto div svg:nth-child(4n) {
-    margin-right: 0;
+div#content-projeto div svg:nth-child(n+5) {
+    align-self: self-end;
+}
+
+div#content-projeto div svg:hover {
+    transform: scale(1.1);
+}
+
+div#content-projeto div svg stop {
+    stop-color: var(--p1);
 }
 
 div#btn-projeto {
@@ -514,6 +571,7 @@ div#btn-projeto a {
     font-size: 1rem;
     font-weight: 600;
     border-top: .2rem solid var(--borda);
+    transition: background-color .3s;
 
     position: relative;
 }
@@ -526,7 +584,12 @@ div#btn-projeto a:nth-child(1)::after {
 
     position: absolute;
     top: 0;
-    left: calc(100% + .1rem); /*0.1 é referente a metade da border-top do botão assim ele fica exatamente no meio*/
+    left: calc(100% + -.15rem);
+    /*0.1 é referente a metade da border-top do botão assim ele fica exatamente no meio*/
+}
+
+div#btn-projeto a:hover {
+    background-color: var(--borda);
 }
 
 /* ----- SECTION FORM -- SECTION FORM -- SECTION FORM ----- */
@@ -544,11 +607,11 @@ section#contato form {
     border-radius: .5rem;
     border: .2rem solid var(--borda);
     padding: 4rem 2rem;
-    
+
     position: relative;
 }
 
-section#contato form > svg {
+section#contato form>svg {
     height: 4rem;
     position: absolute;
     bottom: 100%;
@@ -586,10 +649,16 @@ div.box-input input {
     display: block;
     font-size: 1.1rem;
     font-weight: 500;
-    color: var(--texto2);
-    background-color: transparent;
+    color: var(--texto2) !important;
+    background-color: transparent !important;
     border: none;
     outline: none;
+}
+
+/*Evita a estilização obrigatória do navegador ao usar as opções do autocomplete do formulário*/
+div.box-input input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
 }
 
 div#container-mensagem {
@@ -628,12 +697,19 @@ section#contato form button {
     color: var(--p1);
     font-size: 1.1rem;
     font-weight: 800;
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
+    cursor: pointer;
+    transition: box-shadow, letter-spacing .3s;
 
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+section#contato form button:hover {
+    letter-spacing: .15rem;
+    box-shadow: 0rem 0rem .75rem #070A1A;
 }
 
 /* ----- FOOTER -- FOOTER -- FOOTER ----- */
@@ -658,7 +734,11 @@ div#container-social a svg {
     width: 1.8rem;
     height: 1.8rem;
     fill: var(--texto2);
-    transition: .3s;
+    transition: transform .3s;
+}
+
+div#container-social a svg:hover {
+    transform: scale(1.2);
 }
 
 footer p {

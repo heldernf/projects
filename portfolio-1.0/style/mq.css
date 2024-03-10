@@ -77,11 +77,6 @@
 
     div.box-projeto h2 {
         font-size: 3rem;
-        width: 86%;
-    }
-
-    div.box-projeto h2::after {
-        left: 44%;
     }
 
     div#slide-box {
@@ -124,6 +119,7 @@
         height: 4rem;
         width: 10rem;
         font-size: 1.25rem;
+        letter-spacing: .2rem;
     }
 
     /* ----- FOOTER -- FOOTER -- FOOTER ----- */
@@ -149,13 +145,14 @@
         border: none;
         background-color: transparent;
         width: max-content;
-        gap: 0 2rem;
+        gap: 0 2.4rem;
         position: relative;
         left: 0;
     }
 
     ul#menu-options li {
-        width: 7rem;
+        width: max-content;
+        height: max-content;
     }
 
     ul#menu-options li:last-child {
@@ -164,7 +161,7 @@
     }
 
     ul#menu-options li a {
-        padding: .75rem 0;
+        padding: .75rem 1rem;
         font-size: 1.15rem;
     }
 
@@ -279,10 +276,6 @@
         width: max-content;
         margin-left: 1.6rem;
         margin-right: 0;
-    }
-
-    div.box-projeto h2::after {
-        left: 98%;
     }
 
     div#repart {
@@ -404,7 +397,7 @@
     }
 
     ul#menu-options {
-        gap: 0 2.5rem;
+        gap: 0 2.8rem;
     }
 
     ul#menu-options li a {
@@ -502,12 +495,7 @@
     }
 
     div.box-projeto h2 {
-        width: 89%;
-        margin: 1.95rem auto 0 auto;
-    }
-
-    div.box-projeto h2::after {
-        left: 36.5%;
+        margin: 1.95rem auto 0 1.8484rem;
     }
 
     div#repart {
@@ -573,7 +561,7 @@
     /* ----- HEADER -- HEADER -- HEADER ----- */
 
     ul#menu-options {
-        gap: 0 3rem;
+        gap: 0 3.5rem;
     }
 
     ul#menu-options li a {
@@ -671,11 +659,6 @@
         font-size: 2.9rem;
     }
 
-    div.box-projeto h2::after {
-        left: 98%;
-        bottom: 78%;
-    }
-
     div#repart {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -752,6 +735,194 @@
     }
 }
 
-@media (min-width: 1200px) {
-    
+@media (min-width: 1280px) {
+    /* ----- HEADER -- HEADER -- HEADER ----- */
+
+    header {
+        height: 7rem;
+    }
+
+    header div#container-header {
+        padding: 0 4rem;
+        max-width: 128rem;
+        margin: 0 auto;
+    }
+
+    div#container-header a svg {
+        width: 4rem;
+    }
+
+    ul#menu-options {
+        column-gap: 4rem;
+    }
+
+    ul#menu-options li a {
+        padding: .9rem 1.25rem;
+        font-size: 1.4rem;
+    }
+
+    ul#menu-options li a#active::after {
+        top: 84%;
+    }
+
+    /* ----- MAIN -- MAIN -- MAIN ----- */
+
+    main {
+        margin-top: 7rem;
+    }
+
+    main section>div {
+        width: 100%;
+    }
+
+    /* ----- SECTION INÍCIO -- SECTION INÍCIO -- SECTION INÍCIO ----- */
+
+    div#container-inicio {
+        column-gap: 16rem;
+        padding: 7rem 0;
+    }
+
+    div#container-inicio>img {
+        width: 50rem;
+    }
+
+    div#box-about p {
+        font-size: 1.8rem;
+        width: 43.5rem;
+    }
+
+    div#box-about ul {
+        column-gap: 6.5rem;
+        margin-top: 9rem;
+    }
+
+    div#box-about ul li a {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    div#box-about a#a-contatar {
+        width: 37.5rem;
+        height: 5.1rem;
+        margin-top: 5rem;
+        font-size: 1.6rem;
+    }
+
+    /* ----- SECTION QUALIDADES -- SECTION QUALIDADES -- SECTION QUALIDADES ----- */
+
+    div#container-qualidades h1 {
+        font-size: 5rem;
+        width: max-content;
+        margin: 4.5rem 0 5.5rem 3.5rem;
+    }
+
+    div#container-qualidades h1::before {
+        width: 6.5rem;
+    }
+
+    div#container-qualidades h1::after {
+        left: 6.95rem;
+        bottom: -.55rem;
+        width: .8rem;
+        height: .8rem;
+    }
+
+    div#container-box-qualidades {
+        column-gap: 4.5rem;
+    }
+
+    div.box-qualidade {
+        width: 34rem;
+        height: 25.2rem;
+        padding: 2.5rem;
+    }
+
+    div.box-qualidade div h2 {
+        font-size: 2.2rem;
+    }
+
+    div.box-qualidade div svg {
+        height: 4.4rem;
+    }
+
+    div.box-qualidade h3 {
+        font-size: 1.5rem;
+    }
+
+    /* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
+
+    div#container-projetos h1 {
+        font-size: 5rem;
+        width: max-content;
+        margin: 4.5rem 0 5.5rem 3.5rem;
+    }
+
+    div#container-projetos h1::before {
+        width: 6.5rem;
+    }
+
+    div#container-projetos h1::after {
+        left: 6.95rem;
+        bottom: -.55rem;
+        width: .8rem;
+        height: .8rem;
+    }
+
+    div#container-box-projetos {
+        width: max-content;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem 4rem;
+    }
+
+    div.box-projeto {
+        width: 54rem;
+    }
+
+    div.box-projeto h2 {
+        font-size: 3rem;
+        margin: 2.3rem 0 0 2rem;
+    }
+
+    div#repart {
+        gap: 2.5rem;
+    }
+
+    div#container-slide {
+        margin-left: 2rem;
+    }
+
+    div#content-projeto {
+        margin-right: 2rem;
+    }
+
+    /* ----- SECTION FORM -- SECTION FORM -- SECTION FORM ----- */
+
+    section#contato form {
+        padding: 5.7rem 5rem 6rem 5rem;
+    }
+
+    div#container-mensagem h1 {
+        font-size: 2.6rem;
+    }
+
+    div#container-mensagem textarea {
+        height: 27.2rem;
+    }
+
+    /* ----- FOOTER -- FOOTER -- FOOTER ----- */
+
+    div#container-social {
+        column-gap: 4rem;
+    }
+
+    div#container-social a svg {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    footer p {
+        font-size: 1.2rem;
+    }
 }
