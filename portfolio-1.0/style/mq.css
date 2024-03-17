@@ -79,7 +79,7 @@
         font-size: 3rem;
     }
 
-    div#slide-box {
+    div.slide-box {
         width: 86%;
         height: 19.2rem;
     }
@@ -293,7 +293,7 @@
         grid-area: p1;
     }
 
-    div#slide-box {
+    div.slide-box {
         margin: 0;
         height: 100%;
         width: 100%;
@@ -504,7 +504,7 @@
         margin-top: 1.5rem;
     }
 
-    div#slide-box {
+    div.slide-box {
         width: 89%;
         height: 18rem;
         margin: 0 auto;
@@ -669,7 +669,7 @@
         margin-left: 2.2rem;
     }
 
-    div#slide-box {
+    div.slide-box {
         height: 100%;
         width: 100%;
         margin: 0 auto;
