@@ -503,7 +503,7 @@ div.slide-box img {
     transition: .3s;
 }
 
-div#slide-control {
+div.slide-control {
     display: flex;
     gap: 0 2.2rem;
 
@@ -513,7 +513,7 @@ div#slide-control {
     transform: translateX(-50%);
 }
 
-div#slide-control span.slide-button {
+div.slide-control span.slide-button {
     display: block;
     width: 1.8rem;
     height: 1.1rem;
@@ -523,11 +523,11 @@ div#slide-control span.slide-button {
     cursor: pointer;
 }
 
-div#slide-control span.slide-button:first-child {
+div.slide-control span.slide-button:first-child {
     background-color: var(--white);
 }
 
-div#content-projeto h3 {
+div.content-projeto h3 {
     color: var(--texto1);
     font-size: 1.5rem;
     font-weight: 500;
@@ -542,11 +542,11 @@ div#content-projeto h3 {
     transition: background-size .3s;
 }
 
-div#content-projeto h3:hover {
+div.content-projeto h3:hover {
     background-size: 100% .1rem;
 }
 
-div#content-projeto p {
+div.content-projeto p {
     color: var(--white);
     font-size: 1.7rem;
     font-weight: 600;
@@ -554,7 +554,7 @@ div#content-projeto p {
     margin-top: 2.6rem;
 }
 
-div#content-projeto div {
+div.content-projeto div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -566,32 +566,32 @@ div#content-projeto div {
     width: 23.7rem;
 }
 
-div#content-projeto div svg {
+div.content-projeto div svg {
     width: 3rem;
     height: auto;
     transition: transform .3s;
     cursor: pointer;
 }
 
-div#content-projeto div svg:nth-child(n+5) {
+div.content-projeto div svg:nth-child(n+5) {
     align-self: self-end;
 }
 
-div#content-projeto div svg:hover {
+div.content-projeto div svg:hover {
     transform: scale(1.1);
 }
 
-div#content-projeto div svg stop {
+div.content-projeto div svg stop {
     stop-color: var(--p1);
 }
 
-div#btn-projeto {
+div.btn-projeto {
     display: flex;
     width: 100%;
     margin-top: 2.3rem;
 }
 
-div#btn-projeto a {
+div.btn-projeto a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -607,7 +607,7 @@ div#btn-projeto a {
     position: relative;
 }
 
-div#btn-projeto a:nth-child(1)::after {
+div.btn-projeto a:nth-child(1)::after {
     content: '';
     height: 100%;
     width: .2rem;
@@ -619,7 +619,7 @@ div#btn-projeto a:nth-child(1)::after {
     /*0.1 é referente a metade da border-top do botão assim ele fica exatamente no meio*/
 }
 
-div#btn-projeto a:hover {
+div.btn-projeto a:hover {
     background-color: var(--borda);
 }
 

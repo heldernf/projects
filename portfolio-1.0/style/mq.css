@@ -84,11 +84,11 @@
         height: 19.2rem;
     }
 
-    div#content-projeto h3 {
+    div.content-projeto h3 {
         width: 86%;
     }
 
-    div#btn-projeto a {
+    div.btn-projeto a {
         height: 5rem;
         font-size: 1.1rem;
     }
@@ -278,7 +278,7 @@
         margin-right: 0;
     }
 
-    div#repart {
+    div.repart {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
@@ -289,7 +289,7 @@
         justify-items: center;
     }
 
-    div#container-slide {
+    div.container-slide {
         grid-area: p1;
     }
 
@@ -300,32 +300,32 @@
         width: 23.7rem;
     }
 
-    div#content-projeto {
+    div.content-projeto {
         grid-area: p2;
         width: max-content;
     }
 
-    div#content-projeto h3 {
+    div.content-projeto h3 {
         margin: 0;
         width: 23.7rem;
         font-size: 1.4rem;
     }
 
-    div#content-projeto p {
+    div.content-projeto p {
         font-size: 1.6rem;
     }
 
-    div#content-projeto div {
+    div.content-projeto div {
         margin: 0;
         margin-top: .5rem;
     }
 
-    div#btn-projeto {
+    div.btn-projeto {
         margin-top: 2rem;
         grid-area: p3;
     }
 
-    div#btn-projeto a {
+    div.btn-projeto a {
         font-size: 1.15rem;
     }
 
@@ -498,7 +498,7 @@
         margin: 1.95rem auto 0 1.8484rem;
     }
 
-    div#repart {
+    div.repart {
         display: flex;
         flex-direction: column;
         margin-top: 1.5rem;
@@ -510,20 +510,20 @@
         margin: 0 auto;
     }
 
-    div#content-projeto {
+    div.content-projeto {
         width: auto;
     }
 
-    div#content-projeto h3 {
+    div.content-projeto h3 {
         margin: 1.4rem auto 0 auto;
         width: 89%;
     }
 
-    div#content-projeto div {
+    div.content-projeto div {
         margin: .5rem auto 0 auto;
     }
 
-    div#btn-projeto a {
+    div.btn-projeto a {
         font-size: 1.1rem;
     }
 
@@ -659,13 +659,13 @@
         font-size: 2.9rem;
     }
 
-    div#repart {
+    div.repart {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
     }
 
-    div#container-slide {
+    div.container-slide {
         margin-left: 2.2rem;
     }
 
@@ -675,13 +675,13 @@
         margin: 0 auto;
     }
 
-    div#content-projeto h3 {
+    div.content-projeto h3 {
         margin: 0;
         font-size: 1.5rem;
         width: 100%;
     }
 
-    div#btn-projeto {
+    div.btn-projeto {
         margin: 0;
     }
 
@@ -885,15 +885,15 @@
         margin: 2.3rem 0 0 2rem;
     }
 
-    div#repart {
+    div.repart {
         gap: 2.5rem;
     }
 
-    div#container-slide {
+    div.container-slide {
         margin-left: 2rem;
     }
 
-    div#content-projeto {
+    div.content-projeto {
         margin-right: 2rem;
     }
 
