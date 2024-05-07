@@ -20,13 +20,17 @@ html {
 
 body {
     background-color: var(--main1);
-    overflow-y: hidden;
 }
 
 header {
     height: var(--headerHeight);
     border-bottom: .1rem solid var(--border);
     background-color: var(--main1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
 }
 
 #headerContent {
@@ -62,12 +66,12 @@ nav {
     background-color: var(--main1);
     border-right: .1rem solid var(--border);
     padding: 3rem 0 0 0;
-    position: absolute;
+    position: fixed;
     top: var(--headerHeight);
     left: 0;
     translate: -100%;
     bottom: 0;
-    z-index: 1;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     gap: 3rem 0;
@@ -103,10 +107,11 @@ nav::-webkit-scrollbar-thumb {
     font-weight: 600;
     letter-spacing: .05rem;
     cursor: pointer;
+    user-select: none;
 }
 
 .h2Nav svg {
-    height: 1.4rem;
+    height: 1.1rem;
     fill: var(--white);
 }
 
@@ -169,6 +174,62 @@ nav::-webkit-scrollbar-thumb {
 }
 
 main {
+    padding: 2.5rem;
+    margin-top: var(--headerHeight);
+}
+
+#mainContent {
     display: flex;
-    height: 150vh;
+    flex-direction: column;
+    gap: 4rem 0;
+}
+
+.categoriaJogos {
+    position: relative;
+}
+
+.categoriaJogos::after {
+    content: "";
+    width: 6rem;
+    height: 100%;
+    background: linear-gradient(-90deg, var(--main1) 10%, #081624c4 60%, transparent);
+    position: absolute;
+    right: 0rem;
+    bottom: 0;
+}
+
+.nomeCategoria {
+    margin-bottom: 1rem;
+}
+
+.nomeCategoria h2 {
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.categoriaContainer {
+    display: flex;
+    gap: 0 1rem;
+    overflow: hidden;
+}
+
+.categoriaContent {
+    position: relative;
+}
+
+.categoriaContent img {
+    width: 13rem;
+    height: 17rem;
+    border-radius: .6rem;
+}
+
+.nomeJogo {
+    font-size: 1.7rem;
+    color: var(--white);
+    width: 100%;
+    padding: 0 0 1.5rem 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
