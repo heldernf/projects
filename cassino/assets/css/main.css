@@ -50,15 +50,19 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: .6rem 0;
+    transition: .3s;
 }
 
-#navTrigger span {
+.barNav {
     display: block;
     width: 2rem;
     height: .2rem;
     border-radius: 5rem;
     background-color: var(--white);
+}
+
+.barNav:not(:nth-child(1)) {
+    margin-top: .6rem;
 }
 
 nav {
