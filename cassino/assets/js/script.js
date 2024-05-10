@@ -8,22 +8,8 @@ if (window.innerWidth > 1200) {
 function navToggle() {
     if (getComputedStyle(nav).translate == "-100%") {
         nav.style.translate = "0%";
-
-        barNav[0].style.transition = ".3s";
-        barNav[0].style.transformOrigin = "center";
-        barNav[0].style.transform = "translateY(.1rem) rotate(-135deg)";
-        
-        barNav.initalMarginTop = ".6rem";
-        barNav[1].style.transition = ".3s";
-        barNav[1].style.marginTop = "0";
-        barNav[1].style.transformOrigin = "center";
-        barNav[1].style.transform = "translateY(-.1rem) rotate(135deg)";
     } else {
         nav.style.translate = "-100%";
-
-        barNav[0].style.transform = "none";
-        barNav[1].style.transform = "none";
-        barNav[1].style.marginTop = barNav.initalMarginTop;
     }
 }
 navTrigger.addEventListener("click", navToggle);

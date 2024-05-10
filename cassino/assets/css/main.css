@@ -50,6 +50,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: .6rem 0;
     transition: .3s;
 }
 
@@ -59,10 +60,6 @@ header {
     height: .2rem;
     border-radius: 5rem;
     background-color: var(--white);
-}
-
-.barNav:not(:nth-child(1)) {
-    margin-top: .6rem;
 }
 
 nav {
@@ -188,18 +185,50 @@ main {
     gap: 4rem 0;
 }
 
-.categoriaJogos {
-    position: relative;
+#banner {
+    background: linear-gradient(135deg, #5b2cf1, #022547);
+    padding: 2.2rem;
+    border-radius: 1.4rem .1rem 1.4rem .1rem;
 }
 
-.categoriaJogos::after {
-    content: "";
-    width: 6rem;
+#banner img {
+    display: block;
+    width: 100%;
     height: 100%;
-    background: linear-gradient(-90deg, var(--main1) 10%, #081624c4 60%, transparent);
-    position: absolute;
-    right: 0rem;
-    bottom: 0;
+    height: 28rem;
+    object-fit: cover;
+    border-radius: .4rem;
+}
+
+#h1BannerBonus {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 2.8rem;
+    color: var(--white);
+}
+
+#h2BannerBonus {
+    margin-top: 1.6rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+#depositarBannerBonus {
+    margin: 3rem 0 0 auto;
+    text-decoration: none;
+    color: #000;
+    background-color: #ffffff;
+    box-shadow: 0 0 1rem #0000004b;
+    height: 5rem;
+    width: 55%;
+    border-radius: .4rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nomeCategoria {
@@ -216,6 +245,28 @@ main {
     display: flex;
     gap: 0 1rem;
     overflow: hidden;
+    position: relative;
+}
+
+.categoriaContainer::after {
+    content: "";
+    width: 6rem;
+    height: 100%;
+    background: linear-gradient(-90deg, var(--main1) 10%, #081624c4 60%, transparent);
+    position: absolute;
+    right: 0rem;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.categoriaJogos:nth-child(4) .categoriaContainer {
+    display: grid;
+    gap: 2rem 0;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.categoriaJogos:nth-child(4) .categoriaContainer::after {
+    content: none;
 }
 
 .categoriaContent {
@@ -226,6 +277,7 @@ main {
     width: 13rem;
     height: 17rem;
     border-radius: .6rem;
+    display: block;
 }
 
 .nomeJogo {
