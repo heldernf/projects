@@ -233,18 +233,36 @@ main {
 
 .nomeCategoria {
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0 2rem;
 }
 
 .nomeCategoria h2 {
     color: var(--white);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 
+.setaCategoria {
+    user-select: none;
+}
+
+.setaCategoria svg {
+    fill: var(--text1);
+    width: .8rem;
+    cursor: pointer;
+}
+
+.setaCategoriaLeft {
+    rotate: 180deg;
+}
+
+.setaCategoriaRight {
+    margin-left: 1.2rem;
+}
+
 .categoriaContainer {
-    display: flex;
-    gap: 0 1rem;
-    overflow: hidden;
     position: relative;
 }
 
@@ -254,38 +272,54 @@ main {
     height: 100%;
     background: linear-gradient(-90deg, var(--main1) 10%, #081624c4 60%, transparent);
     position: absolute;
-    right: 0rem;
+    right: 0;
     bottom: 0;
-    overflow: hidden;
 }
 
-.categoriaJogos:nth-child(4) .categoriaContainer {
-    display: grid;
-    gap: 2rem 0;
-    grid-template-columns: repeat(2, 1fr);
+.subCategoriaContainer {
+    display: flex;
+    gap: 0 1rem;
+    overflow-x: auto;
 }
 
-.categoriaJogos:nth-child(4) .categoriaContainer::after {
-    content: none;
+.subCategoriaContainer::-webkit-scrollbar {
+    display: none;
 }
 
-.categoriaContent {
+.jogo {
     position: relative;
+    cursor: pointer;
 }
 
-.categoriaContent img {
+.jogo img {
     width: 13rem;
     height: 17rem;
-    border-radius: .6rem;
+    border-radius: .4rem;
     display: block;
 }
 
 .nomeJogo {
     font-size: 1.7rem;
+    font-weight: 700;
     color: var(--white);
     width: 100%;
-    padding: 0 0 1.5rem 1rem;
+    padding: 0 .75rem 1.2rem .75rem;
     position: absolute;
     left: 0;
     bottom: 0;
+}
+
+#categoriaTodosJogos {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#categoriaTodosJogos::after {
+    content: none;
+}
+
+#categoriaTodosJogos>.jogo img {
+    width: 100%;
+    height: auto;
 }
