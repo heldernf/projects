@@ -2,9 +2,6 @@ const navTrigger = document.getElementById("navTrigger");
 const nav = document.getElementById("nav");
 const barNav = document.querySelectorAll(".barNav");
 
-if (window.innerWidth > 1200) {
-    nav.style.translate = "0%";
-}
 function navToggle() {
     if (getComputedStyle(nav).translate == "-100%") {
         nav.style.translate = "0%";
