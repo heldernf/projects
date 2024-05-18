@@ -20,14 +20,21 @@ li {
 
 html {
     font-size: 62.5%;
-}
-
-*::-webkit-scrollbar {
-    display: none !important;
+    height: 100%;
 }
 
 body {
     background-color: var(--main1);
+}
+
+body::-webkit-scrollbar {
+    width: .6rem;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #05101b;
+    border-radius: 10rem;
 }
 
 header {
