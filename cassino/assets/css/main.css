@@ -369,7 +369,7 @@ main {
 
 #categoriaTodosJogos {
     display: grid;
-    gap: var(--gapGame);
+    gap: 2rem var(--gapGame);
     grid-template-columns: repeat(3, 1fr);
 }
 

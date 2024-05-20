@@ -1,7 +1,7 @@
 @media (min-width: 600px) {
     :root {
         --headerHeight: 7rem;
-        --gapGame: 1.4rem;
+        --gapGame: 1.6rem;
     }
 
     #navTrigger {
@@ -69,6 +69,7 @@
 
     #categoriaTodosJogos {
         grid-template-columns: repeat(5, 1fr);
+        gap: 3.2rem var(--gapGame);
     }
 
     footer {
@@ -110,5 +111,37 @@
 
     #suporteCopy h3 {
         font-size: 1.15rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        --gapGame: 2.4rem;
+    }
+
+    body {
+        display: grid;
+        width: 80vw;
+        grid-template-areas:
+            "nav main"
+            "footer footer"
+        ;
+    }
+
+    nav {
+        grid-area: nav;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    #categoriaTodosJogos {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 3.6rem var(--gapGame);
+    }
+
+    footer {
+        grid-area: footer;
     }
 }
