@@ -5,10 +5,8 @@ const barNav = document.querySelectorAll(".barNav");
 function navToggle() {
     if (getComputedStyle(nav).translate == "-100%") {
         nav.style.translate = "0%";
-        document.querySelector("body").style.overflow = "hidden";
     } else {
         nav.style.translate = "-100%";
-        document.querySelector("body").style.overflow = "visible";
     }
 }
 navTrigger.addEventListener("click", navToggle);

@@ -117,25 +117,45 @@
 @media (min-width: 1200px) {
     :root {
         --gapGame: 2.4rem;
+        --nav-width: 25rem;
+    }
+
+    #headerContent {
+        padding: 0 2.5rem;
     }
 
     body {
         display: grid;
-        width: 80vw;
+        grid-template-columns: 1fr;
         grid-template-areas:
-            "nav main"
+            "main      main"
             "footer footer"
         ;
     }
 
+    #navTrigger {
+        display: none;
+    }
+
     nav {
-        grid-area: nav;
+        translate: 0%;
+        width: var(--nav-width);
+        position: fixed;
     }
 
     main {
         grid-area: main;
+        padding-left: calc(var(--nav-width) + 2.5rem);
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 150rem;
     }
 
+    .categoriaContainer::after {
+        display: none;
+    }
+    
     #categoriaTodosJogos {
         grid-template-columns: repeat(6, 1fr);
         gap: 3.6rem var(--gapGame);
@@ -143,5 +163,6 @@
 
     footer {
         grid-area: footer;
+        margin-left: var(--nav-width);
     }
 }
