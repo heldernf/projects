@@ -27,3 +27,7 @@ h2Nav.forEach(h2 => {
         h2ListToggle(nextSibling);
     });
 })
+
+nav.addEventListener('wheel', (event) => {
+    const atTop = '1' === tst;
+});
