@@ -29,5 +29,8 @@ h2Nav.forEach(h2 => {
 })
 
 nav.addEventListener('wheel', (event) => {
-    const atTop = '1' === tst;
-});
+    const delta = Math.sign(event.deltaY);
+    if ((delta < 0 && nav.scrollTop == 0) || (delta > 0 && nav.scrollTop == nav.scrollHeight - nav.clientHeight)) {
+        event.preventDefault();
+    }
+}, {passive: false});
