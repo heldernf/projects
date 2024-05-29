@@ -1,7 +1,9 @@
 const navTrigger = document.getElementById("navTrigger");
 const nav = document.getElementById("nav");
 const barNav = document.querySelectorAll(".barNav");
+const h2Nav = document.querySelectorAll(".h2Nav");
 
+// EXIBE E OCULTA O NAV
 function navToggle() {
     if (getComputedStyle(nav).translate == "-100%") {
         nav.style.translate = "0%";
@@ -11,7 +13,7 @@ function navToggle() {
 }
 navTrigger.addEventListener("click", navToggle);
 
-const h2Nav = document.querySelectorAll(".h2Nav");
+// EXIBE E OCULTA OS BLOCOS DE OPÇÕES DO NAV
 function h2ListToggle(nextSibling) {
     if (getComputedStyle(nextSibling).display !== "none") {
         nextSibling.style.display = "none";
@@ -28,9 +30,13 @@ h2Nav.forEach(h2 => {
     });
 })
 
-nav.addEventListener('wheel', (event) => {
+// EVITA O SCROLL PULAR PARA O BODY APÓS ESCROLAR O NAV 100% PARA CIMA OU PARA BAIXO
+function scrollJump(event) {
     const delta = Math.sign(event.deltaY);
     if ((delta < 0 && nav.scrollTop == 0) || (delta > 0 && nav.scrollTop == nav.scrollHeight - nav.clientHeight)) {
         event.preventDefault();
     }
-}, {passive: false});
+}
+nav.addEventListener('wheel', (event) => {
+    scrollJump(event);
+});

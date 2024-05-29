@@ -1,2 +1,5 @@
 .htaccess
 .env
+/node_modules
+package-lock.json
+checkout.js
