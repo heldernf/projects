@@ -1,2 +1,2 @@
 import './nav.js';
-import './checkout.js';
+import './modalLoginRegistro.js';
