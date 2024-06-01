@@ -950,6 +950,14 @@
 
             <form action="" method="post" id="modalMain">
                 <div class="inputs">
+                    <input type="text" name="nome" id="nome" placeholder="" required>
+                    <label for="nome">Nome Completo</label>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="cpf" id="cpf" placeholder="" required>
+                    <label for="cpf">CPF</label>
+                </div>
+                <div class="inputs">
                     <input type="email" name="email" id="email" placeholder="" required>
                     <label for="email">Endereço de email</label>
                 </div>
@@ -957,23 +965,14 @@
                     <input type="password" name="senha" id="senha" placeholder="" required>
                     <label for="senha">Senha</label>
                 </div>
-                <div class="inputs">
-                    <input type="text" name="nome" id="nome" placeholder="" required>
-                    <label for="nome">Nome Completo</label>
-                </div>
-
-                <div class="inputs">
-                    <input type="number" name="cpf" id="cpf" placeholder="" required>
-                    <label for="cpf">CPF</label>
-                </div>
 
                 <a href="" id="esqueciSenha">Esqueci a minha senha</a>
 
-                <button type="submit" id="logarRegistrar">Entrar</button>
+                <button type="submit" id="logarRegistrar">Registrar</button>
             </form>
 
             <div id="modalFooter">
-                <p id="pCriarConta">Não tem uma conta? <a href="">Crie uma agora!</a></p>
+                <p id="pCriarEntrar">Ja possui uma conta? <span id="btnCriarEntrar">Entrar na minha conta</span></p>
             </div>
         </div>
     </div>
