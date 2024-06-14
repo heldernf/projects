@@ -48,7 +48,7 @@ function modalTroca() {
     setTimeout(() => {
         if (entrando) {
             entrando = false;
-            typeModal();
+            typeModal("registrar");
         } else {
             entrando = true;
             typeModal("entrar");
@@ -71,11 +71,13 @@ function typeModal(type) {
         // CAMPO DO CPF
         inputs[1].style.display = "none";
         btnConfirmEntrarRegistrar.textContent = "Entrar";
-        pCriarEntrar.innerHTML = `Não tem uma conta? <span id=\"${btnCriarEntrar.id}\">Criar uma conta</span>`;
+        pCriarEntrar.innerHTML = `Não tem uma conta? <span id="${btnCriarEntrar.id}">Criar uma conta</span>`;
         
         btnCriarEntrar = document.getElementById("btnCriarEntrar");
-        btnCriarEntrar.addEventListener("click", modalTroca);
-    } else {
+        btnCriarEntrar.addEventListener("click", modalTroca); // REATRIBUI O OUVINTE PARA O BTN
+    } else if (type == "registrar") {
+        entrando = false;
+
         h2.innerHTML = h2.originalHTML;
         // CAMPO DO NOME
         inputs[0].style.display = inputs[0].originalDisplay;
@@ -86,7 +88,7 @@ function typeModal(type) {
         pCriarEntrar.innerHTML = pCriarEntrar.originalHTML;
 
         btnCriarEntrar = document.getElementById("btnCriarEntrar");
-        btnCriarEntrar.addEventListener("click", modalTroca);
+        btnCriarEntrar.addEventListener("click", modalTroca); // REATRIBUI O OUVINTE PARA O BTN
     }
 }
 
@@ -124,17 +126,17 @@ function modalToggle(type) {
     }
 }
 
-// ABRE MODAL DE ENTRAR
+// ABRE MODAL DE ENTRAR CLICANDO NO BOTÃO 'ENTRAR'
 entrarBtn.addEventListener("click", () => {
     modalToggle("entrar");
 });
 
-// ABRE MODAL DE REGISTRO
+// ABRE MODAL DE REGISTRO CLICANDO NO BOTÃO DE 'REGISTRO'
 registrarBtn.addEventListener("click", () => {
-    modalToggle();
+    modalToggle("registrar");
 });
 
-// FECHA MODAL
+// FECHA MODAL SE CLICAR FORA DELE
 modalContainer.addEventListener("click", function (event) {
     if (running == false) {
         if (event.target === this) {
@@ -143,7 +145,7 @@ modalContainer.addEventListener("click", function (event) {
     }
 });
 
-// FECHA MODAL
+// FECHA MODAL CLICANDO NO BOTÃO EM FORMATO DE 'X'
 closeBtn.addEventListener("click", () => {
     if (running == false) {
         modalToggle();
