@@ -14,20 +14,5 @@ Link de acesso: https://heldernf.github.io/projects/just-rp
 # Funcionalidades 🗝️
 - Exibir habilidades com HTML, CSS e JS.
 
-# Como instalar 🤔
-
-## Pré-requisitos 📖
-
-- GIT
-
-## Passos 🐾
-
-#### Clone o projeto
-```
-git clone https://github.com/heldernf/portfolio.git
-```
-
-Após isso o projeto estará 100% pronto para o uso 😉
-
 # Licença 📜
 Este projeto é licenciado sob a CC-BY-NC-SA-4.0. Consulte o arquivo LICENSE para obter mais informações.
