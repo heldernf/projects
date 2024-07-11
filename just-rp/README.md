@@ -3,9 +3,7 @@
 Link de acesso: https://heldernf.github.io/projects/just-rp
 
 # Sobre o projeto ⚙️
-- Para o desenvolvimento e todos os outros processos desses portfólio, eu utilizei: HTML, CSS, JS, PHP
-
-- O projeto conta com uma pasta chamada 'public', é nela onde é gerado todo o resultado após o comando de build, start ou dev (ex: npm build), pois o Webpack empacota tudo e bota dentro dessa pasta.
+- Para o desenvolvimento eu utilizei: HTML, CSS e JS
 
 - A parte de envio de email NÃO está funcional e serve apenas de representação, para mostrar que existe a possibilidade da implementação da mesma.
 
