@@ -1,8 +1,8 @@
-# Projetos 📽️
+# Projetos 📖
 
 Link de acesso: [just-rp](https://heldernf.github.io/projects/just-rp)
 
-# Sobre ⚙️
+# Sobre ℹ️
 - Este repositório tem como objetivo reunir meus projetos em um único repositório
 
 # Licença 📜
