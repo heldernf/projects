@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Garage</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script defer src="./js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- LIBS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+  <link rel="stylesheet" href="css/spin.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+  <link rel="stylesheet" href="css/toastr.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</head>
+
+<body>
+  <div class="logo">
+    <img src="img/logo.png" alt="">
+  </div>
+
+  <!-- Right Side Info -->
+  <div style="display: none" class="right-side">
+    <div class="right-text">CAR INFO</div>
+    <div class="right-line"></div>
+
+    <!-- Bars Info -->
+    <div class="bararea">
+      <div class="barareatop engine">?</div>
+      <div class="barareatop2">Engine</div>
+      <div class="barareabigbar enginebar">
+        <div style="width: 70%"></div>
+      </div>
+    </div>
+
+    <div class="bararea">
+      <div class="barareatop fuel">?</div>
+      <div class="barareatop2">Fuel</div>
+      <div class="barareabigbar fuelbar">
+        <div style="width: 70%"></div>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="drive">DRIVE</div>
+    <div class="transfer" onclick="transferVehicle()">TRANSFER</div>
+    <div class="transferid">
+      <input id="targetIdTotransfer" min="1" placeholder="Target Id" type="number" />
+      <div class="transferidchar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.0938vw" height="1.0417vw" viewBox="0 0 21 20" fill="none">
+          <path
+            d="M19.3428 12.2204C19.7686 12.2206 20.178 12.3855 20.4862 12.6808C20.7943 12.9761 20.9776 13.3793 20.9981 13.8068C21.0185 14.2342 20.8746 14.6532 20.5961 14.9769C20.3175 15.3006 19.9258 15.5042 19.502 15.5455L19.3428 15.5533H5.65968L7.25138 17.1531C7.55288 17.455 7.72731 17.8619 7.73854 18.2896C7.74978 18.7172 7.59696 19.1328 7.31173 19.4503C7.02651 19.7678 6.63071 19.9629 6.20631 19.9952C5.7819 20.0275 5.36139 19.8946 5.03184 19.6239L4.90583 19.5094L0.673444 15.2544C-0.403167 14.1724 0.297625 12.347 1.76885 12.2271L1.92359 12.2204H19.3428ZM13.7497 0.488617C14.0397 0.196874 14.4271 0.023576 14.8368 0.00223445C15.2466 -0.0191071 15.6497 0.113024 15.9682 0.373076L16.0942 0.487506L20.3266 4.7425C21.4032 5.82457 20.7024 7.64989 19.2312 7.76987L19.0764 7.77654H1.6572C1.23141 7.77633 0.822009 7.61148 0.513846 7.31615C0.205684 7.02081 0.0223798 6.61764 0.00191732 6.19018C-0.0185452 5.76271 0.125403 5.34371 0.403933 5.02001C0.682463 4.69631 1.07422 4.49272 1.49803 4.45142L1.6572 4.44365H15.3403L13.7486 2.84386C13.4381 2.5314 13.2637 2.10785 13.2637 1.66624C13.2637 1.22463 13.4392 0.801076 13.7497 0.488617Z"
+            fill="white" fill-opacity="0.9" />
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Close Menu -->
+  <div onclick="closeUI()" class="close-area">
+    <t>CLOSE MENU</t>
+    <div class="close">ESC</div>
+  </div>
+
+  <!-- Side Area -->
+  <div class="plate-area">
+    <p class="plate-text">UNDEFINED</p>
+    <div class="plate-img-box">
+      <img src="img/plate.png" alt="">
+      <p>1234ABCD</p>
+    </div>
+  </div>
+
+  <!-- Left Side Info -->
+  <div class="left-side">
+    <div style="position: absolute">
+      <!-- Garage Graphic -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="14.3229vw" height="6.1458vw" viewBox="0 0 275 118" fill="none">
+        <path
+          d="M274.329 0V116.308M258.232 0V116.308M242.134 0V116.308M226.037 0V116.308M209.939 0V116.308M193.841 0V116.308M177.744 0V116.308M161.646 0V116.308M145.549 0V116.308M129.451 0V116.308M113.354 0V116.308M97.2561 0V116.308M81.1585 0L81.1585 116.308M65.061 0L65.061 116.308M48.9634 0L48.9634 116.308M32.8659 0L32.8659 116.308M16.7683 0L16.7683 116.308M0.670732 0L0.670737 116.308M275 17.3077L0 17.3077M275 0.692329L0 0.692304M275 33.9231L0 33.9231M275 50.5385L0 50.5385M275 67.1539L0 67.1538M275 83.7692L0 83.7692M275 100.385L0 100.385M275 117L0 117"
+          stroke="url(#paint0_radial_5571_6)" stroke-opacity="0.17" />
+      </svg>
+    </div>
+    <div class="garage-title">
+      <p id="cityName">Vilanova City</p>
+      <p id="depotName"></p>
+    </div>
+    <div class="garage-line"></div>
+    <div class="garage-cars"></div>
+  </div>
+</body>
+
+</html>

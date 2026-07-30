@@ -1,0 +1,24 @@
+- Sempre que uma interação de vehicleMode(spawn, track, recover, fine) for feita
+checar novamente o "mode" do vehicle, principalmente se for após de um "confirm" do
+player para alguma coisa que ele pode passar muito tempo sem confirmar e confirmar
+depois, ou cancelar, isso evitar que o "mode" do veículo seja inválido e evite spawn
+indevido etc.
+
+- uma "UTIL" em "HNF.Utils" para verificar se o player possui "x" de money e então ja cobrar
+
+- organizar as funcionts em /utils
+
+- fazer a coluna "GARAGE" no database ser considerada em funções como a de recover, para
+evitar recuperar um veículo que está guardado em outra garagem que não seja desse script.
+Ver também se alguma outra coluna ou coisa pode ser usado no lugar da coluna "GARAGE", se
+for melhor, considerar ela ao inves da coluna "GARAGE"
+
+- quando fazer a garagem shared, checar o "vehicleMode" do veículo sempre que tentar dirigir
+um veículo, tanto para garagem shared ou normal, pois se dois player estão com o menu aberto
+e tentan dirigir ao mesmo tempo, eles vão duplicar o veículo
+
+- ao abrir a nui nenhuma notify deve ser exibida em caso de eu ter fechado e uma ter sido exibido no final
+e quando eu abro o tempo dela ainda n chegou ao final
+
+- veículos que estão para rastrear mas estão a 15.0 de distancia do player tem que avisar
+apenas que o veículo está proximo dele

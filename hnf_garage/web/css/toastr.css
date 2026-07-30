@@ -1,0 +1,49 @@
+#toast-container {
+    margin: 4.5rem 2rem 0 0 !important;
+}
+
+#toast-container > .toast-success {
+    background-image: url('') !important;
+}
+
+#toast-container > .toast-error {
+    background-image: url('') !important;
+}
+
+/* Notificação de sucesso */
+.toast-success {
+    background-color: rgba(0, 210, 105, 0.900) !important;
+    color: white !important;
+    border-radius: .5rem !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Notificação de erro */
+.toast-error {
+    background-color: rgba(229, 29, 56, 0.900) !important;
+    color: white !important;
+    border-radius: .5rem !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Personalizando texto do título */
+.toast-title {
+    font-weight: bold !important;
+    font-size: 1.35rem !important;
+    line-height: 1.4rem !important;
+    font-family: nature !important;
+}
+
+/* Personalizando texto da mensagem */
+.toast-message {
+    font-size: 1.1rem !important;
+    margin-top: .6rem !important;
+    line-height: 1.2rem !important;
+    font-family: Oswald !important;
+}
+
+/* Ajuste da posição */
+.toast {
+    margin: 1rem 0 0 0 !important;
+    padding: 1.2rem 1.5rem !important;
+}

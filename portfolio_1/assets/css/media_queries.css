@@ -1,0 +1,313 @@
+@media (min-width: 500px) {
+    /* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
+
+    .separator-content-projeto {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "p1 p1"
+            "p2 p3"
+            "p2 p4";
+        gap: 0 2rem;
+        justify-items: center;
+        padding: 2rem;
+    }
+
+    .div-title-projeto {
+        grid-area: p1;
+        margin-bottom: 1rem;
+    }
+
+    .container-slide {
+        grid-area: p2;
+        height: 100%;
+    }
+
+    .slide-box {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .description-projeto {
+        grid-area: p3;
+        margin: 0;
+    }
+
+    #project-detail {
+        grid-area: p4;
+    }
+
+    /* ----- SECTION FORM -- SECTION FORM -- SECTION FORM ----- */
+
+    #container-input {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 600px) {
+    :root {
+        --standard: 1.6rem;
+    }
+
+    /* ----- GERAL SECTION ----- GERAL SECTION ----- */
+
+    .h1-section {
+        margin-top: 4rem;
+        font-size: 4.4rem;
+    }
+
+    /* ----- HEADER -- HEADER -- HEADER ----- */
+
+    header {
+        height: 6.5rem;
+    }
+
+    #logo {
+        width: 4rem;
+    }
+
+    /* ----- MAIN -- MAIN -- MAIN ----- */
+
+    main {
+        margin-top: 6.5rem;
+    }
+
+    /* ----- SECTION INÍCIO -- SECTION INÍCIO -- SECTION INÍCIO ----- */
+
+    #container-inicio {
+        padding: 0 3.5rem;
+    }
+
+    #my-name-is {
+        margin-top: 7rem;
+    }
+
+    #my-name-is p {
+        font-size: 1.6rem;
+    }
+
+    #my-name-is h1 {
+        font-size: 5.6rem;
+    }
+
+    #info-inicio {
+        flex-direction: row;
+        gap: 0 2.5rem;
+    }
+    
+    .loc-contact-info p {
+        font-size: 1.7rem;
+    }
+
+    #box-about {
+        margin-top: 7rem;
+    }
+
+    #box-about p {
+        max-width: 58rem;
+    }
+
+    #a-contatar {
+        margin-bottom: 8rem;
+    }
+
+    /* ----- SECTION HABILIDADES -- SECTION HABILIDADES -- SECTION HABILIDADES ----- */
+
+    #title-habilidade p {
+        max-width: 40rem;
+    }
+
+    #container-box-habilidade {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 18rem;
+        gap: 3rem;
+        margin-top: 6rem;
+    }
+
+    .box-habilidade-wrapper {
+        width: 100%;
+    }
+
+    .box-habilidade:not(:nth-child(1)) {
+        margin: 0;
+    }
+
+    .box-habilidade:nth-child(3) {
+        grid-column: 1 / span 2;
+    }
+
+    #title-skill h1 {
+        margin-top: 6rem;
+        font-size: 3rem;
+    }
+
+    /* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
+
+    /* ----- SECTION FORM -- SECTION FORM -- SECTION FORM ----- */
+
+    #form-contato {
+        max-width: 86rem;
+        padding: 6rem 4rem 5.5rem 4rem;
+        margin: 7.5rem auto 7rem auto;
+    }
+
+    #form-contato>svg {
+        height: 4.7rem;
+    }
+
+    #container-input {
+        gap: 1.25rem 1.25rem;
+    }
+
+    .box-input {
+        height: 5rem;
+    }
+
+    .box-input label {
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+
+    .box-input input {
+        font-size: 1.3rem;
+    }
+
+    #form-contato h1 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        margin-top: 4.5rem;
+    }
+
+    #form-contato textarea {
+        height: 23rem;
+        font-size: 1.3rem;
+    }
+
+    #btn-form {
+        width: 12.5rem;
+        height: 4.5rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: .4rem;
+    }
+
+    #btn-form:hover {
+        width: 13.5rem;
+    }
+
+    /* ----- FOOTER -- FOOTER -- FOOTER ----- */
+}
+
+@media (min-width: 992px) {
+    /* ----- SECTION INÍCIO -- SECTION INÍCIO -- SECTION INÍCIO ----- */
+
+    #container-inicio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        height: calc(100vh - 6.5rem);
+        align-content: center;
+        padding: 0 2.2rem;
+    }
+
+    #my-name-is {
+        margin: 0;
+    }
+
+    #my-name-is p {
+        font-size: 1.9rem;
+    }
+
+    #my-name-is h1 {
+        font-size: 7rem;
+    }
+
+    #box-about h1 {
+        font-size: 4rem;
+    }
+
+    #box-about p {
+        font-size: 1.8rem;
+    }
+
+    #container-social-inicio {
+        width: 100%;
+        grid-column: 2;
+        grid-row: 1 / span 3;
+        justify-self: center;
+        align-self: center;
+        margin: 0;
+    }
+
+    #container-social-inicio h2 {
+        font-size: 3.6rem;
+    }
+
+    #container-social-inicio ul {
+        margin-top: 3.4rem;
+        max-width: 27rem;
+    }
+
+    #container-social-inicio ul li a {
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+
+    #a-contatar {
+        margin: 4.2rem auto 0 auto;
+        font-size: 1.9rem;
+    }
+
+    /* ----- SECTION HABILIDADES -- SECTION HABILIDADES -- SECTION HABILIDADES ----- */
+
+    #container-box-habilidade {
+        display: flex;
+        justify-content: space-around;
+        gap: 0 5rem;
+        margin-top: 7.5rem;
+    }
+
+    .box-habilidade-wrapper {
+        max-width: 36rem;
+        min-height: 24rem;
+    }
+
+    .box-habilidade-wrapper div h2 {
+        font-size: 2.3rem;
+    }
+
+    #title-skill h1 {
+        margin-top: 7.5rem;
+    }
+
+    /* ----- SECTION PROJETOS -- SECTION PROJETOS -- SECTION PROJETOS ----- */
+
+    #container-box-projetos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .box-projeto {
+        width: calc(50% - 1rem);
+        min-height: 37rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .separator-content-projeto {
+        flex-grow: 1;
+    }
+
+    .btn-projeto a {
+        font-size: 1.2rem;
+        font-weight: 300;
+        letter-spacing: .1rem;
+        height: 5rem;
+    }
+}
